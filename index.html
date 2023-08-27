@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABT</title>
     <link href="style.css" rel="stylesheet">
+    <script src='http://code.jquery.com/jquery-latest.min.js'></script>
 </head>
 <body>
     <div id="navbar">
-        <a id="logo" href="#">ABT</a>
+        <a id="logo" href="index.html">ABT</a>
         <ul id="menu">
           <li id="contact"><a href="./index5.html">Contact</a></li>
           <li id="story"><a href="./index4.html">Story</a></li>
           <li id="archive"><a href="./index3.html">Archive</a></li>
-          <li id="info"><a href="./index2.html">Info</a></li>
+          <li id="info"><a class="btn js-click-modal">Info</a></li>
         </ul>
     </div>
     <div class="logo">
@@ -23,5 +24,26 @@
     <div class="Copyright-2023-ABT">
         Copyright @ 2023. ABT
     </div>
+
+    <div class="container">
+        <div class="modal">
+        <div class="Vector"></div>
+          <div class="header">This is a full-width modal with a title</div>
+          <div class="body"><p>And here is all its contents.</p>
+            <a class="btn js-close-modal">Close</a>
+          </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('.js-click-modal').click(function(){
+        $('.container').addClass('modal-open');
+            console.log("run");
+        });
+  
+        $('.js-close-modal').click(function(){
+        $('.container').removeClass('modal-open');
+        });
+    </script>
 </body>
 </html>
