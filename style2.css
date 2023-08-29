@@ -642,13 +642,28 @@ body {
     }
     .mwp-2{
       transform: rotate(-90deg);
-      top:90px;
-      left:270px;
+      top:130px;
+      left:350px;
     }
     .mwp-3{
       transform: rotate(-90deg);
-      top:90px;
-      left:270px;
+      top:230px;
+      left:280px;
+    }
+    .gm-1{
+      transform: rotate(-90deg);
+      top:230px;
+      left:250px;
+    }
+    .gm-2{
+      transform: rotate(-90deg);
+      top:320px;
+      left:200px;
+    }
+    .gm-3{
+      transform: rotate(-90deg);
+      top:310px;
+      left:120px;
     }
   }
   
