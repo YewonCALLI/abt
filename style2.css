@@ -213,7 +213,7 @@ body {
   
   .digital-performance-study {
     position: absolute;
-    margin: 42px 35.1px 43px 0;
+
     left: 2.8%;
     top: 26.8%;
     transform: rotate(-327.56deg);
@@ -559,11 +559,96 @@ body {
       width:90%;
     }
     .neuron{
-      height: 300px;
-      transform: rotate(90deg) translate(0px, -500px);
+      right:50%;
+      transform: rotate(90deg) translate(0%,-50%);
     }
     .neuron img{
-      width: 70%;
+      width: 50%;
+    }
+    .digital-performance-study {
+      font-size: 12px;
+      top:110px;
+      left:10px;
+    }
+    .developing-moments{
+      font-size: 12px;
+      top:215px;
+      left:-60px;
+    }
+    .meeting-with-plannerartists{
+      font-size: 12px;
+      top:108px;
+      left:90px;
+    }
+    .hongyeon-gil-dataset{
+      font-size: 12px;
+      top:40px;
+      left:110px;
+    }
+    .GO-TO-MUSEUM{
+      font-size: 12px;
+      top:200px;
+      left:95px;
+    }
+    .dm-1{
+      transform: rotate(-90deg);
+      top:165px;
+      left:-20px;
+    }
+    .dm-2{
+      transform: rotate(-90deg);
+      top:60px;
+      left:-30px;
+    }
+    .dm-3{
+      transform: rotate(-90deg);
+      top:45px;
+      left:82px;
+    }
+    .dps-1{
+      transform: rotate(-90deg);
+      top:220px;
+      left:160px;
+    }
+    .dps-2{
+      transform: rotate(-90deg);
+      top:160px;
+      left:-100px;
+    }
+    .dps-3{
+      transform: rotate(-90deg);
+      top:30px;
+      left:-170px;
+    }
+    .hgd-1{
+      transform: rotate(-90deg);
+      top:10px;
+      left:110px;
+    }
+    .hgd-2{
+      transform: rotate(-90deg);
+      top:-25px;
+      left:210px;
+    }
+    .hgd-3{
+      transform: rotate(-90deg);
+      top:72px;
+      left:245px;
+    }
+    .mwp-1{
+      transform: rotate(-90deg);
+      top:90px;
+      left:270px;
+    }
+    .mwp-2{
+      transform: rotate(-90deg);
+      top:90px;
+      left:270px;
+    }
+    .mwp-3{
+      transform: rotate(-90deg);
+      top:90px;
+      left:270px;
     }
   }
   
