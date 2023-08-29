@@ -296,6 +296,106 @@ body {
     color: #fff;
   }
 
+  .dps-1{
+    position: absolute;
+    width: 10px;
+    height: 24px;
+    top:315px;
+    margin: 23px 0;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .dps-2{
+    position: absolute;
+    width: 13px;
+    height: 24px;
+    top:-20px;
+    left:-120px;
+    margin: 135px 7px 514px 105.6px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .dps-3{
+    position: absolute;
+    width: 13px;
+    height: 24px;
+    top:65px;
+    left:50px;
+    margin: 45px 34px 19px 126px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    
+  }
+
+  .mwp-1{
+    position: absolute;
+    top:186px;
+    left:512px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .mwp-2{
+    position: absolute;
+    top:292px;
+    left:678px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .mwp-3{
+    position: absolute;
+    top:458px;
+    left:570px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+
   @media screen and (max-width: 768px) {
     /* Mobile */
     .abt_logo_1-1 {
