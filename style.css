@@ -238,16 +238,19 @@ body {
     .column{
       width: 40%;
     }
+    .abt_logo_1-1 {
+      width: 95%;
+    }
   }
   
   @media screen and (min-width:1250px) {
     /* PC */
     .abt_logo_1-1 {
       width: 95%;
-  }
-  .column{
-    width: 30%;
-  }
+    }
+    .column{
+      width: 30%;
+    }
 
   }
 

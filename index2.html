@@ -4,23 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>ABT</title>
     <link href="style2.css" rel="stylesheet">
+    <script src='http://code.jquery.com/jquery-latest.min.js'></script>
+    <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
 </head>
 <body>
     <div id="navbar">
         <a id="logo" href="index.html">ABT</a>
         <ul id="menu">
-          <li id="contact"><a href="index5.html">Contact</a></li>
-          <li id="story"><a href="index4.html">Story</a></li>
-          <li id="archive"><a href="index3.html">Archive</a></li>
-          <li id="info"><a href="index2.html">Info</a></li>
+          <li id="contact"><a href="https://www.instagram.com/yewon.calli/">Contact</a></li>
+          <li id="story"><a href="./index3.html">Story</a></li>
+          <li id="archive"><a href="./index2.html">Archive</a></li>
+          <li id="info"><a class="btn js-click-modal">Info</a></li>
         </ul>
     </div>
-    
-    <div class="logo">
-        <img class="abt_logo_1-1"src="static/abt_logo_1.png"/>
+
+    <div class="neuron">
+        <img src="static/뉴런.png">
+        <span class="digital-performance-study">
+            digital performance study
+        </span>
+        <span class="meeting-with-plannerartists">
+            meeting with planner/artists
+        </span>
+        <span class="hongyeon-gil-dataset">
+            hongyeon-gil dataset
+        </span>
+        <span class="developing-moments">
+            developing moments
+        </span>
+        <span class="GO-TO-MUSEUM">
+            GO TO MUSEUM!
+        </span>
     </div>
-    <div class="Rectangle-7"></div>
+    
+    <div class="container">
+        <div class="modal">
+            <div class="row">
+                <div class="column">
+                  <h2 class="title">아바타 ABT</h2>
+                  <div class="text1">
+                  <span>뮤지엄헤드는 2020년 12월 종로구 계동길에 문을 연 전시공간으로, 미술(관)에 광적인 사람이라는 뜻의 이름이다. 다양한 매체가 전시를 대체하는 현재의 시공에서 물리적 현존으로서 전시와 큐레이팅에 집중하며, 여전히 전시를 만들고, 돌파하고, 갱신한다. 오늘, 서울, 새로움의 명멸을 보다 분명한 전시로 포착, 공유하는 것을 초기 목표로 삼는다. 오늘, 서울, 새로움의 명멸을 보다 분명한 전시로 포착, 공유하는 것을 초기 목표로 삼는다.
+                    <br><br>
+                    멤버 Members<br>
+                    도재인/ <br>
+                    임은정/ <br>
+                    장예원/Yewon Jang <br>
+                    최은총/</span>
+                </div>
+                </div>
+                <div class="column">
+                  <h2 class="title">아바타 ABT</h2>
+                  <div class="text2">
+                  <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu</span>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="title">아이덴티티 디자인</h2>
+                    <img class="logo-image"src="static/logo_small.png"/>
+                    <div class="text1">
+                    <p>‘미술(관)에 몰두한 사람’이라는 뜻의 뮤지엄헤드 Museumhead의 ‘-head’라는 단어에서 연상된 ‘뇌(brain)’의 주름 형태와 질감을 모티브로 디자인하였다. 동시에 공간 이름이 주는 외골수의 느낌을 발랄하게 표현하면서, ‘museum’이 주는 권위적인 인상과 상반되는 이미지를 지향하고자 했다.
+                        <br>
+                        로고 그래픽 / 도재인
+                    </p>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('.js-click-modal').click(function(){
+            if($('.container')[0].className=="container modal-open"){
+                $('.container').removeClass('modal-open');
+            }
+            else{
+                $('.container').addClass('modal-open');
+            }
+            console.log($('.container')[0].className);
+        });
+
+  
+    </script>
+
 </body>
 </html>
