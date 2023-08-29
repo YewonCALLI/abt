@@ -78,71 +78,71 @@ body {
     padding-left: 30px;
   }
 
+  .row{
+    margin: 20px;
+  }
+
+  .column {
+    float: left;
+    padding: 20px;
+    height: 600px;
+    margin-bottom: 240px;
     
-.row{
-  margin: 20px;
-}
-.column {
-  float: left;
-  padding: 20px;
-  height: 600px;
-  margin-bottom: 240px;
-  
-}
-.column .title {
-  font-family: Pretendard;
-  
-}
-.column .text1 {
-  font-family: Pretendard;
-  font-size: 20px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 2;
-  letter-spacing: normal;
-  text-align: left;
-  color: #000;
-}
+  }
+  .column .title {
+    font-family: Pretendard;
+    
+  }
+  .column .text1 {
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
 
-.column .text2 {
-  font-family: Pretendard;
-  font-size: 20px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 2;
-  letter-spacing: normal;
-  text-align: left;
-  color: #000;
-}
+  .column .text2 {
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
 
-.column .logo-image{
-  width: 360px;
-  margin: 29px 24px 3px 29px;
-}
+  .column .logo-image{
+    width: 360px;
+    margin: 29px 24px 3px 29px;
+  }
 
-.container .btn .js-close-modal{
-  position: relative;
-  width: 27px;
-  height: 28px;
-  object-fit: contain;
-}
+  .container .btn .js-close-modal{
+    position: relative;
+    width: 27px;
+    height: 28px;
+    object-fit: contain;
+  }
 
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-.container > .btn {
-  position: absolute;
-  margin: 60px;
-  padding: 20px 40px;
-  font-size: 30px;
-  border-radius: 40px;
-}
+  .container > .btn {
+    position: absolute;
+    margin: 60px;
+    padding: 20px 40px;
+    font-size: 30px;
+    border-radius: 40px;
+  }
 
   .modal {
     background: #fff;
@@ -188,7 +188,7 @@ body {
     padding-right: 30px;
     padding-left: 30px;
     cursor: pointer;
-}
+  }
   
   .container.modal-open .modal {
     top: 0;
@@ -203,7 +203,9 @@ body {
     right: 0px;
     transform: translate(0%, -50%);
   }
+
   .neuron img{
+
     position: absolute;
     object-fit: contain;
 
@@ -212,8 +214,8 @@ body {
   .digital-performance-study {
     position: absolute;
     margin: 42px 35.1px 43px 0;
-    left: 29px;
-    top: 213px;
+    left: 2.8%;
+    top: 26.8%;
     transform: rotate(-327.56deg);
     font-family: Pretendard;
     font-size: 22px;
@@ -298,8 +300,8 @@ body {
 
   .dps-1{
     position: absolute;
-    width: 10px;
-    height: 24px;
+    width: 0.6%;
+    height: 16%;
     top:315px;
     margin: 23px 0;
     font-family: Pretendard;
@@ -333,8 +335,8 @@ body {
 
   .dps-3{
     position: absolute;
-    width: 13px;
-    height: 24px;
+    width: 17.1%;
+    height: 17%;
     top:65px;
     left:50px;
     margin: 45px 34px 19px 126px;
@@ -395,6 +397,141 @@ body {
     color: #fff;
   }
 
+  .hgd-1{
+    position: absolute;
+    top:45px;
+    left:223px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .hgd-2{
+    position: absolute;
+    top:-30px;
+    left:425px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .hgd-3{
+    position: absolute;
+    top:157px;
+    left:479px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .dm-1{
+    position: absolute;
+    top:580px;
+    left:242px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .dm-2{
+    position: absolute;
+    top:612px;
+    left:37px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .dm-3{
+    position: absolute;
+    top:411px;
+    left:16px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .gm-1{
+    position: absolute;
+    top:482px;
+    left:499px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .gm-2{
+    position: absolute;
+    top:627px;
+    left:256px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .gm-3{
+    position: absolute;
+    top:680px;
+    left:460px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
 
   @media screen and (max-width: 768px) {
     /* Mobile */
@@ -420,6 +557,13 @@ body {
     }
     .column .logo-image{
       width:90%;
+    }
+    .neuron{
+      height: 300px;
+      transform: rotate(90deg) translate(0px, -500px);
+    }
+    .neuron img{
+      width: 70%;
     }
   }
   
