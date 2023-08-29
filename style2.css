@@ -559,7 +559,7 @@ body {
       width:90%;
     }
     .neuron{
-      right:50%;
+      right:45%;
       transform: rotate(90deg) translate(0%,-50%);
     }
     .neuron img{
@@ -591,79 +591,94 @@ body {
       left:95px;
     }
     .dm-1{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:165px;
       left:-20px;
     }
     .dm-2{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:60px;
       left:-30px;
     }
     .dm-3{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:45px;
       left:82px;
     }
     .dps-1{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:220px;
       left:160px;
     }
     .dps-2{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:160px;
       left:-100px;
     }
     .dps-3{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:30px;
       left:-170px;
     }
     .hgd-1{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:10px;
       left:110px;
     }
     .hgd-2{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:-25px;
       left:210px;
     }
     .hgd-3{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:72px;
       left:245px;
     }
     .mwp-1{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:90px;
       left:270px;
     }
     .mwp-2{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:130px;
       left:350px;
     }
     .mwp-3{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:230px;
       left:280px;
     }
     .gm-1{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:230px;
       left:250px;
     }
     .gm-2{
+      font-size: 16px;
       transform: rotate(-90deg);
       top:320px;
       left:200px;
     }
     .gm-3{
+      font-size: 16px;
       transform: rotate(-90deg);
-      top:310px;
-      left:120px;
+      top:315px;
+      left:125px;
     }
   }
   
