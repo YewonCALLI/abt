@@ -15,6 +15,22 @@ body {
   background-image: linear-gradient(#593eff 0%, #fff 100%);
 }
 
+a {
+  text-decoration: none;
+}
+a:hover{
+  color:#0095f6;
+}
+a:visited{
+  color: white;
+}
+
+.dps-1 > a {
+  color: white;
+}
+.dps-2 > a {
+  color: white;
+}
 
 #navbar {
   font-family: 'Pretendard-Regular';
@@ -213,9 +229,8 @@ body {
   
   .digital-performance-study {
     position: absolute;
-
     left: 2.8%;
-    top: 26.8%;
+    top: 31.8%;
     transform: rotate(-327.56deg);
     font-family: Pretendard;
     font-size: 22px;
@@ -335,11 +350,8 @@ body {
 
   .dps-3{
     position: absolute;
-    width: 17.1%;
-    height: 17%;
-    top:65px;
-    left:50px;
-    margin: 45px 34px 19px 126px;
+    top:16.3%;
+    left:14%;
     font-family: Pretendard;
     font-size: 20px;
     font-weight: 600;
@@ -602,7 +614,7 @@ body {
       top:60px;
       left:-30px;
     }
-    .dm-3{
+    .dm-3 {
       font-size: 16px;
       transform: rotate(-90deg);
       top:45px;
@@ -614,17 +626,20 @@ body {
       top:220px;
       left:160px;
     }
-    .dps-2{
+    .dps-2 {
       font-size: 16px;
       transform: rotate(-90deg);
       top:160px;
       left:-100px;
     }
+    .dps-3 a{
+      font-size: 16px;
+    }
     .dps-3{
       font-size: 16px;
       transform: rotate(-90deg);
-      top:30px;
-      left:-170px;
+      top:200px;
+      left:-40px;
     }
     .hgd-1{
       font-size: 16px;
@@ -648,19 +663,28 @@ body {
       font-size: 16px;
       transform: rotate(-90deg);
       top:90px;
-      left:270px;
+      left:200px;
     }
     .mwp-2{
       font-size: 16px;
       transform: rotate(-90deg);
-      top:130px;
-      left:350px;
+      top:140px;
+      left:320px;
     }
     .mwp-3{
       font-size: 16px;
       transform: rotate(-90deg);
       top:230px;
-      left:280px;
+      left:260px;
+    }
+    .mwp-1 a{
+      font-size: 16px;
+    }
+    .mwp-2 a{
+      font-size: 16px;
+    }
+    .mwp-3 a{
+      font-size: 16px;
     }
     .gm-1{
       font-size: 16px;
