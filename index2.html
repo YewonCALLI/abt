@@ -119,6 +119,16 @@
         </div>
     </div>
 
+    
+    <div class="container2">
+        <div class="modal2">
+            <div class="alarm">
+                진행 중 ...
+            </div>
+        </div>
+    </div>
+   
+
     <script type="text/javascript">
         $('.js-click-modal').click(function(){
             if($('.container')[0].className=="container modal-open"){
@@ -129,6 +139,19 @@
             }
             console.log($('.container')[0].className);
         });
+
+        $('.js-click-modal2').click(function(){
+            $('.container2').addClass('modal-open');
+            resetAnimation();
+        });
+
+        function resetAnimation() {
+        const target = $('.container2');
+        target.classList.remove("modal-open"),
+        void target.offsetWidth,
+        target.classList.add("modal-open")
+        }
+
     </script>
 
 </body>

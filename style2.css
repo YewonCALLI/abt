@@ -138,9 +138,10 @@ a:visited{
     margin: 29px 24px 3px 29px;
   }
 
-  .container .btn .js-close-modal{
+
+  .container2 .btn .js-close-modal2{
     position: relative;
-    width: 27px;
+    width: 20px;
     height: 28px;
     object-fit: contain;
   }
@@ -153,6 +154,14 @@ a:visited{
   }
 
   .container > .btn {
+    position: absolute;
+    margin: 60px;
+    padding: 20px 40px;
+    font-size: 30px;
+    border-radius: 40px;
+  }
+
+  .container2 > .btn2 {
     position: absolute;
     margin: 60px;
     padding: 20px 40px;
@@ -189,6 +198,46 @@ a:visited{
     }
     z-index: 3;
   }
+
+
+  .modal2 {
+    display: none;
+    background: #fff;
+    overflow: hidden;
+    position: fixed;
+    width: 35%;
+    height: 20%;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 200px 0 0 0;
+    padding: 0 28px 0 28px;
+    border-radius: 30px;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+
+    text-align: left;
+  
+    .body {
+      padding: 20px;
+      font: 300 16px Lato;
+    }
+    z-index: 4;
+  }
+
+  .modal2 .alarm{
+    position: relative;
+    top:50%;
+    font-family: Pretendard;
+    font-size: 30px;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
   
   .btn {
     display: inline-block;
@@ -209,7 +258,17 @@ a:visited{
   .container.modal-open .modal {
     top: 0;
   }
-  
+
+  .container2.modal-open .modal2 {
+    display: block;
+    transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+    animation: fadeout 6s;
+    -moz-animation: fadeout 3s; /* Firefox */
+    -webkit-animation: fadeout 3s; /* Safari and Chrome */
+    -o-animation: fadeout 3s; /* Opera */
+    animation-fill-mode: forwards;
+  }
+
   .neuron{
     position: fixed;
     right: 0%;
@@ -705,6 +764,10 @@ a:visited{
       top:315px;
       left:125px;
     }
+
+    .modal2 .alarm{
+      font-size : 20px;
+    }
   }
   
   @media screen and (min-width:768px) and (max-width:1250px) {
@@ -726,5 +789,43 @@ a:visited{
       width: 30%;
     }
 
+  }
+
+  #Animation
+  @keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+  }
+  @-moz-keyframes fadeout { /* Firefox */
+      from {
+          opacity: 1;
+      }
+      to {
+          opacity: 0;
+          display: none;
+      }
+  }
+  @-webkit-keyframes fadeout { /* Safari and Chrome */
+      from {
+          opacity: 1;
+      }
+      to {
+          opacity: 0;
+          display: none;
+      }
+  }
+  @-o-keyframes fadeout { /* Opera */
+      from {
+          opacity: 1;
+      }
+      to {
+          opacity: 0;
+          display: none;
+      }
   }
   
