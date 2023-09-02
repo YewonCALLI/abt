@@ -878,7 +878,7 @@ a:visited {
   /* Firefox */
   -webkit-animation: fadeout 3s;
   /* Safari and Chrome */
-  -o-animation: fadeout s;
+  -o-animation: fadeout 3s;
   /* Opera */
   animation-fill-mode: forwards;
 }
