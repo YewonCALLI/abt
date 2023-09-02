@@ -48,9 +48,9 @@ body {
   float: left;
   padding: 20px;
   height: 600px;
-  margin-bottom: 240px;
-  
+  margin-bottom: 500px;
 }
+
 .column .title {
   font-family: Pretendard;
   
@@ -214,7 +214,7 @@ body {
     .column{
       width: 90%;
       padding: 0px;
-      margin-bottom: 110px;
+      margin-bottom: 150px;
     }
     .column .title{
       font-size: 20px;
@@ -230,6 +230,9 @@ body {
     }
     .column .logo-image{
       width:90%;
+    }
+    .text1{
+      margin-bottom: 550px;
     }
   }
   
