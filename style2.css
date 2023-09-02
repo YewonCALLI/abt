@@ -872,12 +872,12 @@ a:visited {
 
 /*제이쿼리에서 css를 클래스 형태로 제어하기 위한 애니메이션 클래스*/
 .fadeOut {
-  animation: fadeout 3s;
-  -moz-animation: fadeout 3s;
+  animation: fadeout 2s;
+  -moz-animation: fadeout 2s;
   /* Firefox */
-  -webkit-animation: fadeout 3s;
+  -webkit-animation: fadeout 2s;
   /* Safari and Chrome */
-  -o-animation: fadeout 3s;
+  -o-animation: fadeout 2s;
   /* Opera */
   animation-fill-mode: forwards;
 }
