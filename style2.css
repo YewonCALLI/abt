@@ -105,7 +105,7 @@ a:visited {
   float: left;
   padding: 20px;
   height: 600px;
-  margin-bottom: 240px;
+  margin-bottom: 500px;
 
 }
 
@@ -617,7 +617,7 @@ a:visited {
   .column {
     width: 90%;
     padding: 0px;
-    margin-bottom: 110px;
+    margin-bottom: 150px;
   }
 
   .column .title {
