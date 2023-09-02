@@ -59,15 +59,14 @@ a:visited {
   margin-left: 3%;
 }
 
-
 #navbar a {
   text-decoration: none;
-  color: white;
-  font-family: Pretendard;
+  color:white;
+  font-family: 'Mulish', sans-serif;
+  font-style: italic;
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 500;
   font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   display: inline-block;
@@ -85,11 +84,11 @@ a:visited {
 #menu li a {
   display: inline-block;
   text-decoration: none;
-  font-family: Pretendard;
+  font-family: 'Mulish', sans-serif;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 200;
   font-stretch: normal;
-  font-style: normal;
+  font-style: italic;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
@@ -842,6 +841,21 @@ a:visited {
 
   .modal2 .alarm {
     font-size: 20px;
+  }
+
+  #menu li a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 10px;
   }
 }
 
