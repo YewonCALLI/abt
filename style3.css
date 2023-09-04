@@ -1,0 +1,87 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+canvas {
+  display: block;
+}
+
+#navbar {
+  font-family: Yeasty;
+  font-size:xx-large;
+  width: 98%;
+  top : 2%;
+  color:black;
+  position: absolute;
+  height: 60px;
+  z-index: 1;
+}
+
+#menu {
+  list-style-type: none;
+  line-height: 60px;
+  margin-top: 0px;
+  vertical-align: middle;
+  transform: translate(0%,0%);
+}
+
+#logo {
+  float: left;
+  margin-left: 3%;
+}
+
+#navbar a {
+  text-decoration: none;
+  color:black;
+  font-family: 'Mulish', sans-serif;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 500;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  display: inline-block;
+  line-height: 60px;
+}
+
+#menu li {
+  float: right;
+}
+
+#menu li a:hover{
+  color : rgb(0, 52, 0);
+}
+
+#menu li a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Mulish', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.Copyright-2023-ABT {
+  position: absolute;
+  width: 169px;
+  height: 19px;
+  bottom: 2%;
+  right:0%;
+  margin: 45.8px 28px 9px 18.8px;
+  font-family: 'Mulish', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+    

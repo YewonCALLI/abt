@@ -254,6 +254,24 @@ body {
       padding-left: 10px;
     }
   }
+
+  .Copyright-2023-ABT {
+    position: absolute;
+    width: 169px;
+    height: 19px;
+    bottom: 2%;
+    right:0%;
+    margin: 45.8px 28px 9px 18.8px;
+    font-family: 'Mulish', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
   
   @media screen and (min-width:768px) and (max-width:1250px) {
     /* Tablet */
