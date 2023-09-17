@@ -257,10 +257,10 @@ body {
 
   .Copyright-2023-ABT {
     position: absolute;
-    width: 169px;
     height: 19px;
     bottom: 2%;
     right:0%;
+    
     margin: 45.8px 28px 9px 18.8px;
     font-family: 'Mulish', sans-serif;
     font-style: italic;
