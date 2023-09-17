@@ -84,4 +84,37 @@ canvas {
   text-align: left;
   color: #000;
 }
-    
+
+.vertical-wrap{
+  position: absolute;
+  left:151px;
+  top: 100px;
+  width: 1289px;
+  height: 1116px;
+  padding: 20px;
+  overflow: scroll;
+   /* 가로 스크롤 */
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.IMG_6017 {
+  position:relative;
+  left: 0px;
+  top:0px;
+  width: 307px;
+  height: 410px;
+  flex-grow: 0;
+  margin: 0 109px 150px 0;
+  border-radius: 16px;
+}
+.IMG_6017-1 {
+  position: relative;
+  left: 0px;
+  top:0px;
+  width: 307px;
+  height: 410px;
+  flex-grow: 0;
+  margin: 0 109px 150px 0;
+  border-radius: 16px;
+}

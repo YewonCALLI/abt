@@ -281,6 +281,10 @@ body {
     .abt_logo_1-1 {
       width: 95%;
     }
+    .Copyright-2023-ABT {
+      font-size: 12px;
+    }
+
   }
   
   @media screen and (min-width:1250px) {
