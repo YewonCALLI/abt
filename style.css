@@ -264,7 +264,7 @@ body {
     margin: 45.8px 28px 9px 18.8px;
     font-family: 'Mulish', sans-serif;
     font-style: italic;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: normal;
     font-stretch: normal;
     line-height: normal;
@@ -282,7 +282,7 @@ body {
       width: 95%;
     }
     .Copyright-2023-ABT {
-      font-size: 12px;
+      font-size: 16px;
     }
 
   }
@@ -296,7 +296,7 @@ body {
       width: 30%;
     }
     .Copyright-2023-ABT {
-      font-size: 12px;
+      font-size: 16px;
     }
 
   }
