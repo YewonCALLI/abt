@@ -85,7 +85,7 @@ a:visited {
   display: inline-block;
   text-decoration: none;
   font-family: 'Mulish', sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 200;
   font-stretch: normal;
   font-style: italic;
@@ -864,7 +864,7 @@ a:visited {
     display: inline-block;
     text-decoration: none;
     font-family: 'Mulish', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 200;
     font-stretch: normal;
     font-style: italic;
@@ -886,6 +886,9 @@ a:visited {
   .abt_logo_1-1 {
     width: 95%;
   }
+  .Copyright-2023-ABT {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width:1250px) {
@@ -897,6 +900,9 @@ a:visited {
 
   .column {
     width: 30%;
+  }
+  .Copyright-2023-ABT {
+    font-size: 16px;
   }
 
 }
