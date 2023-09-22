@@ -87,33 +87,22 @@ canvas {
 
 .vertical-wrap{
   position: absolute;
-  left:151px;
+  left:50%;
   top: 100px;
-  width: 1289px;
-  height: 1116px;
+  width: 90%;
   padding: 20px;
   overflow: scroll;
+  transform: translate(-50%,0%);
    /* 가로 스크롤 */
   overflow: auto;
   white-space: nowrap;
 }
 
-.IMG_6017 {
+.vertical-wrap img{
   position:relative;
   left: 0px;
   top:0px;
   width: 307px;
-  height: 410px;
-  flex-grow: 0;
-  margin: 0 109px 150px 0;
-  border-radius: 16px;
-}
-.IMG_6017-1 {
-  position: relative;
-  left: 0px;
-  top:0px;
-  width: 307px;
-  height: 410px;
   flex-grow: 0;
   margin: 0 109px 150px 0;
   border-radius: 16px;
