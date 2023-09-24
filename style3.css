@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,600;1,700;1,800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
@@ -172,7 +183,7 @@ canvas {
 }
 
 
-.title {
+.title2 {
   position: relative;
   left:24px;
   width: 157px;
@@ -337,6 +348,181 @@ canvas {
   margin: 123px 63px 0px 0px;
 }
 
+
+.row {
+  margin: 20px;
+}
+
+.column {
+  float: left;
+  padding: 20px;
+  height: 600px;
+  margin-bottom: 500px;
+
+}
+
+.column .title {
+  font-family: Pretendard;
+  
+}
+.column .text1 {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.column .text2 {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.column .logo-image {
+  width: 360px;
+  margin: 29px 24px 3px 29px;
+}
+
+
+.container2 .btn .js-close-modal2 {
+  position: relative;
+  width: 20px;
+  height: 28px;
+  object-fit: contain;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container>.btn {
+  position: absolute;
+  margin: 60px;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 40px;
+}
+
+.container2>.btn2 {
+  position: absolute;
+  margin: 60px;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 40px;
+}
+
+.modal {
+  background: #fff;
+  overflow: scroll;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  margin: 120px 0 0 0;
+  padding: 0 28px 0 28px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+
+  text-align: left;
+
+  .header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    font: 300 24px Lato;
+    position: relative;
+  }
+
+  .body {
+    padding: 20px;
+    font: 300 16px Lato;
+  }
+
+  z-index: 3;
+}
+
+
+.modal2 {
+  display: none;
+  background: #fff;
+  overflow: hidden;
+  position: fixed;
+  width: 35%;
+  height: 20%;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 200px 0 0 0;
+  padding: 0 28px 0 28px;
+  border-radius: 30px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255);
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  text-align: left;
+
+  .body {
+    padding: 20px;
+    font: 300 16px Lato;
+  }
+
+  z-index: 4;
+}
+
+.modal2 .alarm {
+  position: relative;
+  top: 50%;
+  font-family: Pretendard;
+  font-size: 30px;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.container.modal-open .modal {
+  top: 0;
+}
+
+.container2.modal-open .modal2 {
+  display: block;
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
 @media screen and (max-width: 768px) {
   #menu li a {
     display: inline-block;
@@ -352,6 +538,34 @@ canvas {
     padding-right: 20px;
     padding-left: 10px;
   }
+
+  .abt_logo_1-1 {
+    width: 150%;
+    left: 52%;
+  }
+  .column{
+    width: 90%;
+    padding: 0px;
+    margin-bottom: 340px;
+  }
+  .column .title{
+    font-size: 20px;
+  }
+  .column .text1{
+    font-size: 16px;
+  }
+  .column .text2{
+    font-size: 16px;
+  }
+  .modal{
+    padding: 0 15px 0 15px;
+  }
+  .column .logo-image{
+    width:90%;
+  }
+  .text1{
+    margin-bottom: 550px;
+  }
 }
 
 
@@ -360,10 +574,30 @@ canvas {
   .Copyright-2023-ABT {
     font-size: 16px;
   }
+
+  .column{
+    width: 40%;
+  }
+  .abt_logo_1-1 {
+    width: 95%;
+  }
+  .Copyright-2023-ABT {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width:1250px) {
 
+  .Copyright-2023-ABT {
+    font-size: 16px;
+  }
+
+  .abt_logo_1-1 {
+    width: 95%;
+  }
+  .column{
+    width: 30%;
+  }
   .Copyright-2023-ABT {
     font-size: 16px;
   }
@@ -381,3 +615,5 @@ canvas {
 
 	}
 }
+
+
