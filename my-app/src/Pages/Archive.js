@@ -14,28 +14,30 @@ function Archive() {
 
   return (
     <div className="App">
-      <div id="navbar">
-        <a id="logo" href="/">
-          ABT
-        </a>
-        <ul id="menu">
-          <li id="contact">
-            <a href="https://www.instagram.com/art.body.tech/">Contact</a>
-          </li>
-          <li id="archive">
-            <a href="/archive">Archive</a>
-          </li>
-          <li id="info">
-            <a
-              className="btn js-click-modal"
-              onClick={() => {
-                opencloseModal();
-              }}
-            >
-              Info
-            </a>
-          </li>
-        </ul>
+      <div class="back">
+        <div id="navbar">
+          <a id="logo" href="/">
+            ABT
+          </a>
+          <ul id="menu">
+            <li id="contact">
+              <a href="https://www.instagram.com/art.body.tech/">Contact</a>
+            </li>
+            <li id="archive">
+              <a href="/archive">Archive</a>
+            </li>
+            <li id="info">
+              <a
+                className="btn js-click-modal"
+                onClick={() => {
+                  opencloseModal();
+                }}
+              >
+                Info
+              </a>
+            </li>
+          </ul>
+        </div>
      </div>
 
     <div className="Copyright-2023-ABT">Copyright @ 2023. ABT</div>

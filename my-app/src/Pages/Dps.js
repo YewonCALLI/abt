@@ -14,12 +14,21 @@ function DPS() {
 
   return (
     <div className="App">
-      <div id="navbar">
+      <div id="navbar1">
         <a id="logo" href="/">ABT</a>
         <ul id="menu">
           <li id="contact"><a href="https://www.instagram.com/art.body.tech/">Contact</a></li>
           <li id="archive"><a href="/archive">Archive</a></li>
-          <li id="info"><a class="btn js-click-modal">Info</a></li>        
+          <li id="info">
+              <a
+                className="btn js-click-modal"
+                onClick={() => {
+                  opencloseModal();
+                }}
+              >
+                Info
+              </a>
+            </li>        
         </ul>
         </div>
         <div class="main">
@@ -66,23 +75,22 @@ function DPS() {
             <div class="Rectangle-11">
                 <div class="footer2">
                     <div class="footer3">
-                    <span class="ABT-Avatar">
-                        ABT : Avatar
-                    </span>
-                    <span class="Info">
-                        Info
-                    </span>
-                    <span class="Archive">
-                        Archive
-                    </span>
-                <div class="arrow">
-                    <span class="Contact">
-                        Contact
-                    </span>
-                    <img class="arrow_icon" src="static/Vector 7.png"/>
-                </div>
+                      <span class="ABT-Avatar">
+                          ABT : Avatar
+                      </span>
+                      <a class="arrow" href="https://www.instagram.com/art.body.tech/">
+                          <span class="Contact">
+                              Contact
+                          </span>
+                          <img class="arrow_icon" src="static/Vector 7.png"/>
+                      </a>
+                
+                    </div>
+                    
+                    <a class="Archive" href="/archive">
+                      Archive
+                    </a>
                 <div class="Vector-8"></div>
-            </div>
         </div>
         </div>
       <Modal />

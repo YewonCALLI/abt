@@ -17,7 +17,7 @@ canvas {
   display: block;
 }
 
-#navbar {
+#navbar1 {
   font-family: Yeasty;
   font-size:xx-large;
   width: 98%;
@@ -46,7 +46,7 @@ canvas {
   margin-left: 3%;
 }
 
-#navbar a {
+#navbar1 a {
   text-decoration: none;
   color:black;
   font-family: 'Mulish', sans-serif;
@@ -251,8 +251,8 @@ canvas {
 .footer2{
   position:relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 40%;
   top:0px;
   background-color: #593eff;
 }
@@ -267,9 +267,17 @@ canvas {
   background-color: #593eff;
 }
 
+.arrow{
+  position: relative;
+  left:63px;
+  width: 350px;
+  height: 20px;
+
+}
+
 .Vector-8 {
   position: relative;
-  top:180px;
+  top:120px;
   left:50%;
   width: 90%;
   height: 1px;
@@ -279,12 +287,11 @@ canvas {
 
 .ABT-Avatar {
   position: relative;
-  width: 558px;
   left:63px;
-  height: 120px;
+  width:100%;
   margin: 52px 0px 0px 0px;
   font-family: Mulish;
-  font-size: 96px;
+  font-size: 70px;
   font-weight: 300;
   font-stretch: normal;
   font-style: italic;
@@ -294,11 +301,11 @@ canvas {
   color: #fff;
 }
 
+
 .Contact {
   width: 128px;
   height: 45px;
   font-family: Mulish;
-  margin: 110px 63px 0px 0px;
   font-size: 36px;
   font-weight: 300;
   font-stretch: normal;
@@ -342,10 +349,13 @@ canvas {
   color: #fff;
 }
 
+
+
 .arrow_icon{
+  position: relative;
   width:115px;
   height: 19px;
-  margin: 123px 63px 0px 0px;
+  margin: 123px 63px 0px 20px;
 }
 
 
@@ -566,6 +576,33 @@ canvas {
   .text1{
     margin-bottom: 550px;
   }
+  .ABT-Avatar{
+    font-size: 40px;
+    width: 250px;
+  }
+  .arrow{
+    width: 100px;
+  }
+
+  .arrow_icon{
+    display: none;
+    width: 50px;
+    height:10px;
+  }
+  .Archive{
+    font-size: 30px;
+  }
+  .Contact{
+    font-size: 30px;
+
+  }
+  .Rectangle-11 {
+    position:relative;
+    width: 100%;
+    height: 50%;
+    top:0px;
+    background-color: #593eff;
+  }
 }
 
 
@@ -584,12 +621,24 @@ canvas {
   .Copyright-2023-ABT {
     font-size: 16px;
   }
+  .footer3{
+    flex-direction: column;
+  }
+  .arrow{
+    position: relative;
+    left:60%;
+    height: 20px;
+
+  }
 }
 
 @media screen and (min-width:1250px) {
 
   .Copyright-2023-ABT {
     font-size: 16px;
+  }
+  .ABT-Avatar{
+    left:0px;
   }
 
   .abt_logo_1-1 {
@@ -600,6 +649,29 @@ canvas {
   }
   .Copyright-2023-ABT {
     font-size: 16px;
+  }
+  .footer3{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    left:50%;
+    height: 40%;
+    transform: translate(-50%,0%);
+    justify-content: space-between;
+  }
+  .arrow{
+    position: relative;
+    left:63px;
+    width: 350px;
+    height: 20px;
+  }
+  .Archive{
+    position: relative;
+    width:90%;
+    left:50%;
+    transform: translate(-50%,0%);
+
   }
 
 }
