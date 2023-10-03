@@ -209,7 +209,7 @@ canvas {
   position: relative;
   font-family: Mulish;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   margin: 2px 29px 7px 29px;
@@ -289,7 +289,7 @@ canvas {
   margin: 52px 0px 0px 0px;
   font-family: Mulish;
   font-size: 70px;
-  font-weight: 300;
+  font-weight: 400;
   font-stretch: normal;
   font-style: italic;
   line-height: normal;
@@ -304,7 +304,7 @@ canvas {
   height: 45px;
   font-family: Mulish;
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -337,7 +337,7 @@ canvas {
   height: 45px;
   font-family: Mulish;
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -536,7 +536,7 @@ canvas {
     text-decoration: none;
     font-family: 'Mulish', sans-serif;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 400;
     font-stretch: normal;
     font-style: italic;
     line-height: normal;
@@ -566,13 +566,13 @@ canvas {
   }
   .title2{
     position: relative;
-    margin: 0px 0px 0px 15px;
+    margin: 0;
     font-size : 18px;
   }
 
   .Collecting-emotions-from-hongyeon-gil{
-    margin: 0px 0px 0px 15px;
     font-size: 15px;
+    margin: 0;
   }
 
   .date{
@@ -608,8 +608,11 @@ canvas {
     margin-bottom: 550px;
   }
   .ABT-Avatar{
+    position: relative;
+    top:30px;
     font-size: 40px;
     width: 250px;
+    margin:10px;
   }
   .arrow{
     width: 100px;
@@ -622,10 +625,16 @@ canvas {
   }
   .Archive{
     font-size: 30px;
+    position: relative;
+    left:30px;
+    top:50px;
+    margin:10px;
   }
   .Contact{
+    position: relative;
+    top:30px;
     font-size: 30px;
-
+    margin:10px;
   }
   .Rectangle-11 {
     position:relative;
@@ -633,6 +642,10 @@ canvas {
     height: 50%;
     top:0px;
     background-color: #593eff;
+  }
+  .footer3{
+    position: relative;
+    left:-30px;
   }
 }
 
@@ -653,6 +666,7 @@ canvas {
     font-size: 16px;
   }
   .footer3{
+
     flex-direction: column;
   }
   .arrow{
