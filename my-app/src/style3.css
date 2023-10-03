@@ -207,7 +207,7 @@ canvas {
 
 .Collecting-emotions-from-hongyeon-gil {
   position: relative;
-  font-family: Mulish;
+  font-family: 'Mulish', sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-stretch: normal;
@@ -302,7 +302,7 @@ canvas {
 .Contact {
   width: 128px;
   height: 45px;
-  font-family: Mulish;
+  font-family: 'Mulish', sans-serif;
   font-size: 36px;
   font-weight: 400;
   font-stretch: normal;
@@ -335,7 +335,7 @@ canvas {
   top:20px;
   left:63px;
   height: 45px;
-  font-family: Mulish;
+  font-family: 'Mulish', sans-serif;
   font-size: 32px;
   font-weight: 400;
   font-stretch: normal;
@@ -620,11 +620,10 @@ canvas {
 
   .arrow_icon{
     display: none;
-    width: 50px;
-    height:10px;
   }
   .Archive{
     font-size: 30px;
+    font-family: 'Mulish', sans-serif;
     position: relative;
     left:30px;
     top:50px;
