@@ -416,6 +416,16 @@ body {
     }
     .mo-News .mo-news_title {
       color: black;
+      font-weight: 600;
+    }
+    .mo-News .mo-light{
+      position: relative;
+      width: 40px;
+    }
+    .mo-news_title .text-style-1{
+      font-size: 12px;
+      font-weight: 500;
+      animation: blink-effect 1s step-end infinite;
     }
 
     /* .mo-message .mo-light{
