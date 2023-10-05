@@ -24,6 +24,7 @@ a:hover {
 
 a:visited {
   color: white;
+  z-index: 1;
 }
 
 .dps-1>a {
