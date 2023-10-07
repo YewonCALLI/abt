@@ -213,9 +213,7 @@
 
 
 @media screen and (max-width: 768px) {
-  .chat-app{
-    display: none;
-  }
+  
   .intro_title{
     font-size :28px;
   }
@@ -225,9 +223,44 @@
   .intro_title3{
     font-size :28px;
   }
+  .message2{
+    position: absolute;
+    left:50%;
+    top:50%;
+    height: 400px;
+    transform: translate(-50%, 0%);
+    margin:0px;
+    animation: box-move 1s linear forwards;
+
+  }
+  .new-message-input{
+    width: 75%;
+    height: 30px;
+  }
+  .send-button{
+    height:30px;
+  }
+  .messages{
+    height: 220px;
+  }
   .input_text2{
     top:65%;
     font-size: 13px;
+  }
+  .message{
+    font-size: 12px;
+  }
+
+}
+
+@keyframes box-move {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
 

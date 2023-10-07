@@ -468,9 +468,23 @@ body {
 
   @media screen and (max-width: 768px) {
     .message2{
-      display: none;
+      width: 220px;
+    }
+    .New-Updates{
+      font-size: 14px;
+      margin: 0px;
+    }
+    #news.news_title{
+      font-size: 14px;
+    }
+    #news.news_title.text-style-1{
+      font-size: 14px;
+    }
+    .News .alarm{
+      margin: 0px;
     }
     .mo-message{
+      display: none;
       position: absolute;
       top:5%;
       left:50%;
@@ -549,14 +563,5 @@ body {
     }
   }
 
-  @keyframes box-move {
-    from {
-      opacity: 0;
-      transform: translate(-50%, -50%);
-    }
-    to {
-      opacity: 1;
-      transform: translate(-50%, 40%);
-    }
-  }
+
   
