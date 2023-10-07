@@ -1,6 +1,13 @@
 import * as React from "react";
+import { useState, useRef } from "react";
 import "../style.css";
 import {Modal} from "./Modal";
+import { Auth } from "../components/Auth";
+import Cookies from "universal-cookie";
+import {Chat} from "../components/Chat";
+import {signOut} from 'firebase/auth'
+import {auth} from '../firebase-config.js'
+const cookies = new Cookies();
 
 function Main() {
   const opencloseModal = () => {
@@ -11,8 +18,32 @@ function Main() {
     }
   };
 
+  const [isAuth, setIsAuth] = useState(cookies.get("auth-token"));
+
+
+  const SignUserOut = async () => {
+    await signOut(auth);
+    cookies.remove("auth-token");
+    setIsAuth(false);
+  };
+
+  if(!isAuth){
+    return (
+    <div>
+      <Auth setIsAuth={setIsAuth}/>
+    </div>
+    );
+  }
+
+
+
   return (
     <div className="App">
+      {/* <Auth /> */}
+      <Chat />
+      <div className="sign-out">
+          <button onClick ={SignUserOut} >Sign Out</button>
+      </div>
       <div class="back">
         <div id="navbar">
           <a id="logo" href="/">
@@ -40,7 +71,7 @@ function Main() {
         <div className="logo">
           <img className="abt_logo_1-1" src="static/abt_logo_1.png" />
         </div>
-        <div class="message">
+        {/* <div class="message2">
           <span class="New-Updates">
             New Updates
           </span>
@@ -54,12 +85,7 @@ function Main() {
                 09.02(토)
               </span>
           </div>
-          <div class="input_text">
-            <span class="Type-Something">
-              Type Something
-            </span>
-          </div>
-        </div>
+        </div> */}
 
         <div class="mo-message">
           <div class="mo-News">

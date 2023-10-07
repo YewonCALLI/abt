@@ -19,7 +19,7 @@ body {
   background-image: linear-gradient(#593eff 0%, #fff 100%);
 }
 
-.message {
+.message2 {
   position: absolute;
   right:2.7%;
   top:9.1%;
@@ -31,6 +31,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1;
 }
 
 .New-Updates {
@@ -54,15 +55,27 @@ body {
   top:15px;
 
 }
+
+.News_header{
+  position: relative;
+  display: flex;
+  height: 82%;;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
 .News{
-  height: 6%;
   width: 100%;
+  height: 100px;
   position: relative;
   top:2%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around
+  justify-content: space-around;
+  align-items: flex-start
 }
+
 #news.news_title{
   position: relative;
   flex-grow: 0;
@@ -106,7 +119,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.message .input_text{
+.message2 .input_text{
   position: relative;
   width: 100%;
   top: 80%;
@@ -388,7 +401,7 @@ body {
 
 
   @media screen and (max-width: 768px) {
-    .message{
+    .message2{
       display: none;
     }
     .mo-message{
