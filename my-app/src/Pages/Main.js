@@ -41,9 +41,6 @@ function Main() {
     <div className="App">
       {/* <Auth /> */}
       <Chat />
-      <div className="sign-out">
-          <button onClick ={SignUserOut} >Sign Out</button>
-      </div>
       <div class="back">
         <div id="navbar">
           <a id="logo" href="/">
@@ -63,7 +60,7 @@ function Main() {
                   opencloseModal();
                 }}
               >
-                Info
+              Info
               </a>
             </li>
           </ul>
@@ -97,6 +94,13 @@ function Main() {
           </div>
         </div>
         <div className="Copyright-2023-ABT">Copyright @ 2023. ABT</div>
+        <div className="LogOut"> 
+        <img src="static/log_out.png" className="signout_image" onClick ={SignUserOut}></img>
+        <img src="static/logout_arrow.png" className="signout_arrow" onClick ={SignUserOut}></img>
+          <div className="sign-out">
+            <button onClick ={SignUserOut} className="signout_button">로그아웃</button>
+          </div>        
+        </div>
         <Modal />
       </div>
     </div>

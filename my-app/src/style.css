@@ -4,6 +4,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@font-face {
+  font-family: 'HakgyoansimGodeunjemokM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGodeunjemokM.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HakgyoansimGodeunjemokB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGodeunjemokB.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
 html,
 body {
   width:100%;
@@ -336,6 +351,40 @@ body {
     top: 0;
   }
 
+  .LogOut{
+    position: relative;
+    bottom: 20%;
+    left:40px;
+    width: 200px;
+    height: 70px;
+    z-index: 0;
+  }
+
+  .signout_button{
+    position: absolute;
+    bottom: -20%;
+    left: 70px;
+    font-family: 'HakgyoansimGodeunjemokM';
+    font-size:22px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: left;
+    color: #3f3f3f;
+    border: none;
+    cursor: pointer;
+  }
+
+  .signout_arrow{
+    position: relative;
+    width: 51px;
+    left:12px;
+    top:-40px;
+  }
+
+  .signout_image{
+    width: 65px;
+  }
+
   @media screen and (max-width: 768px) {
     /* Mobile */
     .abt_logo_1-1 {
@@ -378,6 +427,23 @@ body {
       text-align: left;
       padding-right: 20px;
       padding-left: 10px;
+    }
+    .LogOut{
+      bottom:13%;
+      left:4%;
+    }
+    .signout_image{
+      width:50px;
+    }
+    .signout_arrow{
+      width:40px;
+      left:5px;
+      top:-25px;
+    }
+    .signout_button{
+      font-size: 15px;
+      top:20px;
+      left: 50px;
     }
   }
 
@@ -461,6 +527,7 @@ body {
     }
 
   }
+
   
   @media screen and (min-width:1250px) {
     /* PC */
