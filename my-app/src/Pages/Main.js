@@ -9,6 +9,7 @@ import {signOut} from 'firebase/auth'
 import {auth} from '../firebase-config.js'
 const cookies = new Cookies();
 
+
 function Main() {
   const opencloseModal = () => {
     if(document.querySelector(".container").classList.contains("modal-open")){
@@ -40,6 +41,7 @@ function Main() {
   return (
     <div className="App">
       {/* <Auth /> */}
+      
       <Chat />
       <div class="back">
         <div id="navbar">
