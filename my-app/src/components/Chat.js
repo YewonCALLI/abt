@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {addDoc, collection, serverTimestamp, onSnapshot, query, where,} from 'firebase/firestore';
+import {addDoc, collection, serverTimestamp, onSnapshot, query, where,orderBy} from 'firebase/firestore';
 import {auth, db} from '../firebase-config.js';
 import "../chatstyle.css"
 import "../style.css"
@@ -11,7 +11,10 @@ export const Chat = () => {
     const messagesRef = collection(db, "messages");
 
     useEffect(() => {
-        const queryMessages = query(messagesRef);
+        const queryMessages = query(
+            messagesRef,
+            orderBy("createdAt")
+            );
         const unsubscribe = onSnapshot(queryMessages, (snapshot) => {
             let messages = [];
             snapshot.forEach((doc) => {
