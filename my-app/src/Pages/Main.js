@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, useRef } from "react";
 import "../style.css";
+import "../chatstyle.css";
 import {Modal} from "./Modal";
 import { Auth } from "../components/Auth";
 import Cookies from "universal-cookie";
