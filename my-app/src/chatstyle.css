@@ -252,6 +252,7 @@
   .input_text2{
     top:65%;
     font-size: 13px;
+    animation: box-move2 0s 1;
   }
   .message{
     font-size: 12px;
