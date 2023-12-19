@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import Onboarding from './Onboarding'
-import Home from './Home'
+import SplashScreen from './SplashScreen'
+import HomeScreen from './HomeScreen'
 
 export default function Page(props) {
   const [page, setPage] = useState<string>('index')
@@ -10,8 +10,8 @@ export default function Page(props) {
 
   return (
     <>
-      <Onboarding />
-      <Home />
+      <SplashScreen />
+      <HomeScreen />
     </>
   )
 }

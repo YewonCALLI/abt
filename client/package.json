@@ -10,10 +10,12 @@
     "node": ">=14"
   },
   "dependencies": {
+    "@gsap/react": "^2.0.2",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-styled-components": "^2.0.7",
     "framer": "^2.2.0",
     "framer-motion": "^7.6.5",
+    "gsap": "^3.12.4",
     "next": "^13.0.1",
     "next-pwa": "^5.6.0",
     "react": "^18.2.0",
@@ -22,6 +24,7 @@
     "react-merge-refs": "^2.0.1",
     "react-spinners": "^0.13.8",
     "react-spring": "^9.5.5",
+    "react-type-animation": "^3.2.0",
     "sass": "^1.59.3",
     "styled-components": "^5.3.8",
     "twin.macro": "^3.1.0"

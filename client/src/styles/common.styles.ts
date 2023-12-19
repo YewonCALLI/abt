@@ -5,9 +5,24 @@ import { motion, Variants } from 'framer-motion'
 
 export const MotionDiv = styled(motion.div).attrs({
   layout: true,
-  initial: { opacity: 0 },
+  initial: { opacity: 1 },
   animate: { opacity: 1 },
+  exit: { opacity: 0 },
   transition: { duration: 0.3 },
+})``
+
+export const SlideDiv = styled(motion.div).attrs({
+  layout: true,
+  initial: { height: 0, opacity: 0 },
+  animate: {
+    height: 'fit-content',
+    opacity: 1,
+  },
+  exit: { height: 0, opacity: 0 },
+  transition: {
+    duration: 0.3,
+    ease: 'easeInOut',
+  },
 })``
 
 export const MotionText = styled(motion.span).attrs({
