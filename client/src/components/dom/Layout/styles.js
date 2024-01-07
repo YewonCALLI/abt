@@ -2,43 +2,35 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 import { MotionModal } from '@/styles/common.styles'
 
-export const Header = styled.div<{
-  height: number
-  scrollPosition: number
-}>`
+export const Header = styled.div`
   ${tw`
   fixed
   top-0
     w-full
-    h-20
-    bg-white
+    h-fit
     flex
     flex-row
     justify-between
-    items-center
-    text-black
-    text-3xl
-    font-bold
     text-center 
     z-40
-    border-b
-    border-black
     `}
-  ${({ scrollPosition }) => (scrollPosition < 20 ? tw`mix-blend-normal` : tw` mix-blend-difference`)}
 `
 
 export const HeaderLogo = styled.div`
   ${tw`
   flex 
-  items-center
-  pt-1
-  h-full
-  px-4
+  flex-col
+  justify-center
+  items-start
+  h-fit
   cursor-pointer
-  w-fit 
+  w-fit
+  px-4 
+  py-2
   active:opacity-50
   md:hover:opacity-50
   `}
+  ${({ isMenuOpen }) => isMenuOpen && tw`opacity-0`}
 `
 
 export const MenuButton = styled.div`
@@ -46,8 +38,10 @@ export const MenuButton = styled.div`
   flex 
   items-center 
   h-full 
-  px-4 
+  p-4 
   cursor-pointer 
+  text-white
+  text-2xl
   w-fit
   active:opacity-50
   md:hover:opacity-50
@@ -55,14 +49,18 @@ export const MenuButton = styled.div`
 `
 export const MenuModal = styled(MotionModal)`
   ${tw`
-fixed
+  fixed
   z-30 
   w-full 
   h-full 
   flex
+  flex-col
+  gap-8
   justify-center
   items-center
-  bg-white 
+  bg-black
+  bg-opacity-70
+  backdrop-blur-sm
   text-black
   py-20
   px-10
@@ -73,8 +71,9 @@ export const MenuModalContent = styled.div`
   ${tw`
   flex
   flex-col
+  md:flex-row
   w-fit
-  h-full
+  h-fit
   gap-4
   justify-center
   items-center
@@ -85,14 +84,16 @@ export const MenuModalItem = styled.div`
   ${tw`
   flex
   flex-row
-  justify-start
+  justify-center
   items-center
+  text-center
   w-full
   px-8
   pt-2
   h-20
-  text-4xl
-  font-[hel-bd]
+  text-white
+  text-2xl
+  font-semibold
   cursor-pointer
   rounded-full
   active:opacity-50
@@ -105,5 +106,31 @@ export const MenuModalItemHidden = styled.p`
   font-[hel-th]
   hidden
   md:flex
+  `}
+`
+
+export const MenuModalSNSlist = styled.div`
+  ${tw`
+w-fit
+h-fit
+   flex 
+   flex-row
+    md:gap-6
+    gap-10
+
+    `}
+`
+export const MenuModalSNSitem = styled.div`
+  ${tw` 
+  w-fit
+  h-fit
+  flex  
+  items-center
+  justify-center
+  text-white
+  text-2xl 
+  cursor-pointer
+  active:opacity-50
+  md:hover:opacity-50
   `}
 `
