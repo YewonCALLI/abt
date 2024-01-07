@@ -31,7 +31,7 @@ export const Loader = () => {
   )
 }
 
-const PanningLimitControls = () => {
+const PanningLimitControls = ({ ...props }) => {
   const controls = useRef()
   const { camera } = useThree()
 
@@ -39,7 +39,7 @@ const PanningLimitControls = () => {
     // 패닝 제한 로직을 여기에 추가
   })
 
-  return <MapControls maxDistance={10} ref={controls} args={[camera]} />
+  return <MapControls {...props} ref={controls} args={[camera]} />
 }
 
 const Scene = ({ children, orbit, map, ...props }) => {

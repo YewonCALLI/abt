@@ -6,9 +6,9 @@ export const Canvas = (props) => {
   return (
     <R3FCanvas
       {...props}
-      //top view camera
-      camera={{ position: [0, 10, 0], near: 0.01, far: 1000 }}
-      // camera={{ position: [0, 10, 0] }}
+      frameloop='demand'
+      orthographic
+      camera={{ position: [0, 10, 0], zoom: 70, far: 10000 }}
       dpr={[1, 2]}
       shadows
     >

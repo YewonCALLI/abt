@@ -1,12 +1,11 @@
 import Scene from '@/components/canvas/Scene'
 import { Canvas } from '@/components/canvas/Canvas'
-import { Box, Plane, useTexture, AxesHelper } from '@react-three/drei'
+import { Box, Plane, useTexture } from '@react-three/drei'
 import * as THREE from 'three'
 import React from 'react'
 import Header from '@/components/dom/Layout/Header'
-import SplashScreen from '../components/dom/SplashScreen'
+import { Logo, SplashScreen, Copyright } from '@/components/dom'
 
-// Dom components go here
 export default function Page(props) {
   return (
     <>
@@ -16,8 +15,11 @@ export default function Page(props) {
         <Canvas>
           <Scene map>
             <Map />
+            {/* <gridHelper args={[100, 100]} scale={0.5} /> */}
           </Scene>
         </Canvas>
+        <Logo className='absolute bottom-0 right-0 z-20' />
+        <Copyright className='absolute bottom-0 left-0 z-20' />
       </div>
     </>
   )

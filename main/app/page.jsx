@@ -32,7 +32,7 @@ export default function Page() {
 
         <View className='flex h-96 w-full flex-col items-center justify-center'>
           <Suspense fallback={null}>
-            <Common />
+            <Common color={black} />
           </Suspense>
         </View>
       </div>

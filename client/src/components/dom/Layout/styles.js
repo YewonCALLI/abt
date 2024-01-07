@@ -38,7 +38,7 @@ export const MenuButton = styled.div`
   flex 
   items-center 
   h-full 
-  p-4 
+  p-4
   cursor-pointer 
   text-white
   text-2xl

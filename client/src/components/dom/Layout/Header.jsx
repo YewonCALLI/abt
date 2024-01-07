@@ -1,5 +1,4 @@
 import * as S from './styles'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import MenuModal from './MenuModal'
@@ -7,7 +6,7 @@ import { AnimatePresence } from 'framer-motion'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoMdClose } from 'react-icons/io'
 
-const Header = ({ ...props }) => {
+export default function Header({ ...props }) {
   const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -46,5 +45,3 @@ const Header = ({ ...props }) => {
     </>
   )
 }
-
-export default Header
