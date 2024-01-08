@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 
-export function SplashScreen(props) {
+export default function SplashScreen(props) {
   const [isSplashDone, setIsSplashDone] = useState(false)
 
   return (
