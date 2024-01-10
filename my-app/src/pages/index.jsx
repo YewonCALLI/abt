@@ -4,7 +4,9 @@ import { Box, Plane, useTexture } from '@react-three/drei'
 import * as THREE from 'three'
 import React from 'react'
 import Header from '@/components/dom/Layout/Header'
-import { Logo, SplashScreen, Copyright } from '@/components/dom'
+import { Logo } from '@/components/dom/Logo'
+import SplashScreen from '@/components/dom/SplashScreen'
+import { Copyright } from '@/components/dom/Copyright'
 
 export default function Page(props) {
   return (
