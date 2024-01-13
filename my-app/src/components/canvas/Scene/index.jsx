@@ -50,8 +50,8 @@ const Scene = ({ children, orbit, map, ...props }) => {
         {children}
         <Preload all />
       </Suspense>
-      {orbit && <OrbitControls />}
-      {map && <PanningLimitControls />}
+      {orbit && <OrbitControls {...props} />}
+      {map && <PanningLimitControls {...props} />}
     </>
   )
 }

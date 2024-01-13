@@ -30,15 +30,10 @@ export default function Header({ ...props }) {
             }
           }}
         >
-          <h1
-            className='text-2xl font-bold text-left text-white'
-            style={{
-              fontFamily: 'BookkMyungjo-Bd',
-            }}
-          >
-            도전! 실버벨 : 홍연길 프로젝트
-          </h1>
-          <h3 className='text-sm font-light text-left text-white'>The Silver Bell challenge : Hong Yeon-gil project</h3>
+          <h1 className='text-4xl font-bold text-left text-white'>도전! 실버벨</h1>
+          <h3 className='text-4xl font-light text-left text-white'>The Silver Bell challenge</h3>
+          <h1 className='text-4xl font-bold text-left text-white font-[BookkMyungjo]'>: 홍연길 프로젝트</h1>
+          <h3 className='text-4xl font-light text-left text-white'>Hong Yeon-gil project</h3>
         </S.HeaderLogo>
         <S.MenuButton
           onClick={() => {
