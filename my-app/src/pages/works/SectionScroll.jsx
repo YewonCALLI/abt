@@ -34,7 +34,7 @@ export const SectionScrollPage = (props) => {
       <div className='w-full h-screen'>
         <section className='w-full h-screen bg-black'></section>
         {[1, 2, 3, 4, 5].map((index) => (
-          <Section id={index} />
+          <Section id={index} key={'section'} />
         ))}
       </div>
       <motion.div className='fixed top-0 left-0 w-full h-1 bg-black' style={{ scaleX }} />
