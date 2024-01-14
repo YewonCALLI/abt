@@ -1,16 +1,13 @@
 import React from 'react'
 import { useRef } from 'react'
 import { SectionScrollPage } from '../components/dom/works/SectionScroll'
-import { ParallaxProvider } from 'react-scroll-parallax'
-import Scene from '@/components/canvas/Scene'
-import { Canvas } from '@/components/canvas/Canvas'
-import { Box, Sky } from '@react-three/drei'
+import { ArtInfo, Interview } from '@/components/dom/works/data/jane'
 
 export default function Page(props) {
   return (
     <>
-      <SectionScrollPage>
-        <div className='w-full h-1/2 md:h-full '>
+      <SectionScrollPage ArtInfo={ArtInfo} Interview={Interview}>
+        <div className='w-full h-full '>
           <iframe src='https://onethread.vercel.app/' className='w-full h-full bg-black' />
         </div>
       </SectionScrollPage>
@@ -19,5 +16,5 @@ export default function Page(props) {
 }
 
 export async function getStaticProps() {
-  return { props: { title: 'Index' } }
+  return { props: { title: ArtInfo.title } }
 }
