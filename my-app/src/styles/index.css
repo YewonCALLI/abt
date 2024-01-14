@@ -2,22 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-
 @font-face {
-  font-family: 'BookkMyungjo';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-.woff2') format('woff2');
-  font-weight: 700;
+  font-family: 'bkk-sans';
+  src: url('/fonts/bkk_sans_bold.ttf'
+    );
+  font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Italianno';
-  src: url("/fonts/Italianno-Regular.ttf") format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
 
 
 @layer base {
@@ -33,7 +25,7 @@
   #__next {
     width: 100%;
     background: #000;
-    font-family: 'Pretendard', sans-serif;
+    font-family: 'bkk-sans', sans-serif;
   }
 
   html {
