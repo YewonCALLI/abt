@@ -10,8 +10,8 @@ export default function Page(props) {
   return (
     <>
       <SectionScrollPage>
-        <div className='p-4'>
-          <iframe src='https://www.youtube.com/embed/2Vv-BfVoq4g' className='w-full h-screen rounded-lg' />
+        <div className='w-full h-1/2 md:h-full '>
+          <iframe src='https://onethread.vercel.app/' className='w-full h-full bg-black' />
         </div>
       </SectionScrollPage>
     </>

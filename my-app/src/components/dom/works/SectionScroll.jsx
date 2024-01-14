@@ -12,7 +12,7 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
 
   const Badge = ({ children, ...props }) => {
     return (
-      <div className='w-fit h-fit mt-1' {...props}>
+      <div className='w-fit h-fit mt-1 text-black border-b-2 border-black' {...props}>
         <span className='w-8 h-6 text-xs md:text-sm text-center flex flex-row justify-center items-center'>
           {children}
         </span>
@@ -24,13 +24,12 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
 
   return (
     <section id={id} ref={ref} className='w-full h-screen'>
-      <div className='w-full h-full bg-white border-red bg-opacity-10 backdrop-blur-md flex justify-center items-center'>
-        {id}
-        <div className='w-fit h-full p-10 md:p-40 flex flex-col justify-center items-stretch gap-10'>
-          {typeSequence >= id && (
+      <div className='w-full h-full bg-white border-red bg-opacity-30 backdrop-blur-md flex justify-center items-center'>
+        <div className='w-full h-full p-10 md:p-40 flex flex-col justify-center items-stretch gap-10  overflow-x-hidden'>
+          {typeSequence >= id ? (
             <>
               <div className='w-full h-fit flex flex-col justify-start items-start gap-2'>
-                <Badge className='bg-white border border-black text-black'>은총</Badge>
+                <Badge>은총</Badge>
                 <TypeAnimation
                   sequence={[
                     textQ,
@@ -39,11 +38,11 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
                     },
                   ]}
                   cursor={false}
-                  className='w-full max-w-[1080px] text-xl text-left text-black break-keep'
+                  className='w-full text-sm md:text-xl text-left text-black break-keep'
                 />
               </div>
               <div className='w-full h-fit flex flex-col-reverse justify-end items-end gap-2'>
-                {isQuestionDone && (
+                {isQuestionDone && textA.length ? (
                   <>
                     <TypeAnimation
                       sequence={[
@@ -53,13 +52,28 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
                         },
                       ]}
                       cursor={false}
-                      className='w-full max-w-[1080px] text-xl text-left text-black break-keep'
+                      className='w-full max-w-[1080px] text-sm md:text-xl text-left text-black break-keep'
                     />
-                    <Badge className='bg-black text-white'>{artist}</Badge>
+                    <Badge>{artist}</Badge>
                   </>
-                )}
+                ) : null}
               </div>
             </>
+          ) : (
+            <div className='w-full h-fit opacity-30'>
+              <div className='w-full h-fit flex flex-col justify-start items-start gap-2'>
+                <Badge>은총</Badge>
+                <p className='w-full text-sm md:text-xl text-left text-black break-keep'>{textQ}</p>
+              </div>
+              <div className='w-full h-fit flex flex-col-reverse justify-end items-end gap-2'>
+                {textA.length ? (
+                  <>
+                    <p className='w-full max-w-[1080px] text-sm md:text-xl text-left text-black break-keep'>{textA}</p>
+                    <Badge>{artist}</Badge>
+                  </>
+                ) : null}
+              </div>
+            </div>
           )}
         </div>
       </div>
@@ -98,10 +112,14 @@ export const SectionScrollPage = (props) => {
   console.log('setTypeSequence', typeSequence)
   return (
     <>
-      <section className='w-full fixed top-0 h-screen'>
-        <div className='w-full h-full bg-white'>{children}</div>
+      <section className='w-full fixed flex flex-col top-0 h-screen bg-white text-black'>
+        <div className='w-full h-fit bg-white'>
+          <h1 className='w-full h-fit text-3xl'>한가닥 ( 2023 )</h1>
+        </div>
+
+        <h3 className='w-full h-fit text-md '>인터랙티브 웹 아트, 3D 가상 공간, 사운드, 홍연길 인터뷰 아카이빙</h3>
         <button
-          className=' absolute bottom-10 text-xl py-1 active:bg-black active:text-white md:hover:bg-black md:hover:text-white border-b-2 border-black left-1/2 -translate-x-1/2 z-20 flex flex-row justify-center items-center gap-2 animate-pulse'
+          className='text-xl py-1 active:bg-black active:text-white md:hover:bg-black md:hover:text-white border-b-2 border-black  flex flex-row justify-center items-center gap-2 animate-pulse'
           onClick={scrollToStart}
         >
           작품 인터뷰 보기 <GoArrowDown />
@@ -127,7 +145,10 @@ export const SectionScrollPage = (props) => {
           )
         })}
       </div>
-      <motion.div className='fixed top-0 left-0 w-full h-1 bg-black' style={{ scaleX }} />
+      <section className='w-full h-screen bg-black'>
+        <div className='w-full h-full'>{children}</div>
+      </section>
+      <motion.div className='fixed  top-0 left-0 w-full h-1 bg-black' style={{ scaleX }} />
     </>
   )
 }
