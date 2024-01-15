@@ -11,7 +11,7 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
 
   const Badge = ({ children, ...props }) => {
     return (
-      <div className='w-fit h-fit mt-1 text-black border-b-2 border-black' {...props}>
+      <div className='w-fit h-fit mt-1 text-white border-b-2 border-white' {...props}>
         <span className='w-8 h-6 text-xs md:text-sm text-center flex flex-row justify-center items-center'>
           {children}
         </span>
@@ -37,7 +37,7 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
                     },
                   ]}
                   cursor={false}
-                  className='w-full text-sm md:text-xl text-left text-black break-keep '
+                  className='w-full text-sm md:text-xl text-left text-white break-keep '
                 />
               </div>
               <div className='w-full h-fit flex flex-col-reverse justify-end items-end gap-2'>
@@ -51,7 +51,7 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
                         },
                       ]}
                       cursor={false}
-                      className='w-full text-sm md:text-xl text-left text-black break-keep
+                      className='w-full text-sm md:text-xl text-left text-white break-keep
                       
                       '
                     />
@@ -64,12 +64,12 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
             <div className='w-full h-fit opacity-30'>
               <div className='w-full h-fit flex flex-col justify-start items-start gap-2'>
                 <Badge>은총</Badge>
-                <p className='w-full text-sm md:text-xl text-left text-black break-keep'>{textQ}</p>
+                <p className='w-full text-sm md:text-xl text-left text-white break-keep'>{textQ}</p>
               </div>
               <div className='w-full h-fit flex flex-col-reverse justify-end items-end gap-2'>
                 {textA.length ? (
                   <>
-                    <p className='w-full max-w-[1080px] text-sm md:text-xl text-left text-black break-keep'>{textA}</p>
+                    <p className='w-full max-w-[1080px] text-sm md:text-xl text-left text-white break-keep'>{textA}</p>
                     <Badge>{artist}</Badge>
                   </>
                 ) : null}
@@ -132,14 +132,14 @@ export const SectionScrollPage = (props) => {
 
         <div className='w-full md:w-1/2 h-fit flex flex-col justify-center items-start gap-1'>
           <span className='w-fit h-fit text-sm md:text-md border-b border-black'>Artist</span>
-          <span className='w-fit h-fit text-sm md:text-md '>{ArtInfo.artist}</span>
+          <span className='w-fit h-fit text-xxs md:text-xs '>{ArtInfo.artist}</span>
         </div>
         <div className='w-full h-fit flex flex-col justify-center items-start gap-1'>
           <span className='w-fit h-fit text-sm md:text-md  border-b border-black'>Credit</span>
           <div className='flex flex-col'>
             {ArtInfo.credit.map((item, index) => {
               return (
-                <span key={index} className='w-fit h-fit text-sm md:text-md '>
+                <span key={index} className='w-fit h-fit text-xxs md:text-xs '>
                   {item}
                 </span>
               )
@@ -148,7 +148,7 @@ export const SectionScrollPage = (props) => {
         </div>
         <div className='w-full h-fit flex flex-col justify-center items-start gap-1'>
           <span className='w-fit h-fit  text-sm md:text-md border-b border-black'>Detail</span>
-          <span className='w-fit h-fit text-xs md:text-md '>{ArtInfo.detail}</span>
+          <span className='w-fit h-fit text-xxs md:text-xs '>{ArtInfo.detail}</span>
         </div>
         <div className='fixed -z-10 top-0 left-0 w-full h-full'>
           <div className='fixed z-10 top-0 w-full h-full bg-white bg-opacity-30 backdrop-blur-xl'></div>
@@ -186,7 +186,7 @@ export const SectionScrollPage = (props) => {
         })}
       </div>
 
-      <motion.div className='fixed  top-0 left-0 w-full h-1 bg-black' style={{ scaleX }} />
+      <motion.div className='fixed  top-0 left-0 w-full h-1 bg-white' style={{ scaleX }} />
     </>
   )
 }
