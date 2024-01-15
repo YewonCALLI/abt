@@ -36,6 +36,7 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
                       setIsQuestionDone(true)
                     },
                   ]}
+                  speed={50}
                   cursor={false}
                   className='w-full text-sm md:text-xl text-left text-white break-keep '
                 />
@@ -51,8 +52,8 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
                         },
                       ]}
                       cursor={false}
+                      speed={50}
                       className='w-full text-sm md:text-xl text-left text-white break-keep
-                      
                       '
                     />
                     <Badge>{artist}</Badge>
@@ -112,7 +113,7 @@ export const SectionScrollPage = (props) => {
 
   return (
     <>
-      <section className='w-full fixed flex flex-col justify-center items-start gap-4 p-4 md:p-20 top-0 h-screen bg-white text-black'>
+      <section className='w-full fixed transition-all flex flex-col justify-center items-start gap-4 p-4 md:p-20 top-0 h-screen bg-white text-black'>
         <div className='w-full h-fit pb-1 border-b border-black'>
           <h1 className='w-full h-fit text-2xl md:text-4xl font-[bkkserif]'>{ArtInfo.title}</h1>
           <h3 className='w-full h-fit text-2xl md:text-4xl font-[italianno]'>{ArtInfo.category}</h3>
