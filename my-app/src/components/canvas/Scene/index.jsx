@@ -31,15 +31,32 @@ export const Loader = () => {
   )
 }
 
-const PanningLimitControls = ({ ...props }) => {
+const PanningLimitControls = ({ targetPosition, ...props }) => {
   const controls = useRef()
   const { camera } = useThree()
 
+  // 패닝 제한 영역의 크기를 정의합니다.
   useFrame(() => {
-    // 패닝 제한 로직을 여기에 추가
+    // 현재 카메라 위치를 가져옵니다.
+    const { x, z } = controls.current.target
+
+    // 카메라 위치가 패닝 제한 영역을 벗어나면 카메라 위치를 패닝 제한 영역 안으로 되돌립니다.
+    if (x < -15) {
+      controls.current.target.x = -15
+    } else if (x > 15) {
+      controls.current.target.x = 15
+    }
+    if (z < -8) {
+      controls.current.target.z = -8
+    } else if (z > 8) {
+      controls.current.target.z = 8
+    }
+
+    // controls.current가 null이 아닌 경우에만 update 메소드를 호출합니다.
+    controls.current && controls.current.update()
   })
 
-  return <MapControls {...props} ref={controls} args={[camera]} />
+  return <MapControls {...props} ref={controls} args={[camera]} target={targetPosition} />
 }
 
 const Scene = ({ children, orbit, map, ...props }) => {
@@ -51,7 +68,7 @@ const Scene = ({ children, orbit, map, ...props }) => {
         <Preload all />
       </Suspense>
       {orbit && <OrbitControls {...props} />}
-      {map && <PanningLimitControls {...props} />}
+      {map && <PanningLimitControls targetPosition={(0, 0, 0)} {...props} />}
     </>
   )
 }

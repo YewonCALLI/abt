@@ -24,7 +24,7 @@ export default function Page(props) {
           <Scene map>
             <Map />
             <Pin
-              position={[5, 0.05, -0.09]}
+              position={[-2, 0.05, -2]}
               color='#00FF88'
               onClick={() => {
                 router.push('/yewon')
@@ -34,7 +34,7 @@ export default function Page(props) {
               add='홍연경로당'
             />
             <Pin
-              position={[7, 0.05, -7]}
+              position={[2, 0.05, -4]}
               color='#FF66B0'
               onClick={() => {
                 router.push('/jane')
@@ -44,7 +44,7 @@ export default function Page(props) {
               add='강원종합포장'
             />
             <Pin
-              position={[2, 0.05, -4]}
+              position={[7, 0.05, -7]}
               color='#F0E442'
               onClick={() => {
                 router.push('/eunjoung')
@@ -67,23 +67,25 @@ export default function Page(props) {
 
 function Pin({ position, add, title, artist, children, color, onClick }) {
   return (
-    <Html className='content' rotation-x={-Math.PI / 2} position={position} transform occlude>
+    <Html className='content' rotation-x={-Math.PI / 2} position={position} occlude>
       <div
         onClick={onClick}
         className='w-fit h-fit  
        flex flex-row gap-2 justify-center items-center cursor-pointer active:scale-90 hover:scale-90 transition-all duration-300 active: md:hover:shadow-xl shadow-white active:opacity-60 md:hover:opacity-60'
       >
         <div
-          className='w-10 h-10 rounded-full animate-pulse flex justify-center items-center'
+          className='w-[90px] h-[90px] relative rounded-full flex justify-center items-center'
           style={{
             backgroundColor: color || 'white',
           }}
         >
-          <p className='text-black text-[7px] text-center'>{add}</p>
+          <p className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xs w-fit h-fit text-center'>
+            {add}
+          </p>
         </div>
-        <div className='w-fit h-fit flex flex-col justify-center items-start'>
-          <span className='text-sm font-[bkkserif] text-white'>{title}</span>
-          <span className='text-xs font-[italianno] text-white'>{artist}</span>
+        <div className='w-24 h-fit flex flex-col justify-center items-start'>
+          <span className='text-lg font-bold text-white'>{title}</span>
+          <span className='text-xs font-[bkkserif] text-white'>{artist}</span>
         </div>
         {children}
       </div>
