@@ -31,6 +31,7 @@ export default function Page(props) {
               }}
               title='홍연 1.0'
               artist='Yewon Jang'
+              add='홍연경로당'
             />
             <Pin
               position={[7, 0.05, -7]}
@@ -40,6 +41,7 @@ export default function Page(props) {
               }}
               title='한 가닥'
               artist='Jane Tao'
+              add='강원종합포장'
             />
             <Pin
               position={[2, 0.05, -4]}
@@ -49,8 +51,9 @@ export default function Page(props) {
               }}
               title='골든 에이지'
               artist='Eunjoung Im'
+              add='홍연길'
             />
-            <Pin position={[-1.1, 0.05, 2.19]} color='#009ACC' title='실버벨' />
+            <Pin position={[-1.1, 0.05, 2.19]} color='#009ACC' title='실버벨' add='달동네' />
 
             {/* <gridHelper args={[100, 100]} scale={0.5} /> */}
           </Scene>
@@ -62,7 +65,7 @@ export default function Page(props) {
   )
 }
 
-function Pin({ position, title, artist, children, color, onClick }) {
+function Pin({ position, add, title, artist, children, color, onClick }) {
   return (
     <Html className='content' rotation-x={-Math.PI / 2} position={position} transform occlude>
       <div
@@ -71,11 +74,13 @@ function Pin({ position, title, artist, children, color, onClick }) {
        flex flex-row gap-2 justify-center items-center cursor-pointer active:scale-90 hover:scale-90 transition-all duration-300 active: md:hover:shadow-xl shadow-white active:opacity-60 md:hover:opacity-60'
       >
         <div
-          className='w-10 h-10 rounded-full'
+          className='w-10 h-10 rounded-full animate-pulse flex justify-center items-center'
           style={{
             backgroundColor: color || 'white',
           }}
-        />
+        >
+          <p className='text-black text-[7px] text-center'>{add}</p>
+        </div>
         <div className='w-fit h-fit flex flex-col justify-center items-start'>
           <span className='text-sm font-[bkkserif] text-white'>{title}</span>
           <span className='text-xs font-[italianno] text-white'>{artist}</span>
@@ -99,5 +104,5 @@ function Map() {
 }
 
 export async function getStaticProps() {
-  return { props: { title: 'Index' } }
+  return { props: { title: '도전! 실버벨' } }
 }
