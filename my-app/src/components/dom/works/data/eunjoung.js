@@ -1,6 +1,6 @@
 export const ArtInfo = {
-  title: 'The golden age, 2023',
-  category: 'Single channel video',
+  title: '골든 에이지, 2023',
+  category: 'The golden age, 2023',
   caption: ['단채널 영상', '컬러', '사운드', '3분 20초', 'single channel video', 'color', 'sound', '3min 20sec'],
   artist: '임은정 Eunjoung Im',
   name: '은정',

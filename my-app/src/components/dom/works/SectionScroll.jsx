@@ -23,8 +23,8 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
 
   return (
     <section id={id} ref={ref} className='w-full h-screen'>
-      <div className='w-full h-full backdrop-blur-md flex justify-center items-center'>
-        <div className='w-full max-w-[1080px] h-full p-10 md:p-40 flex flex-col justify-center items-stretch gap-10  overflow-x-hidden'>
+      <div className='w-full h-full bg-black bg-opacity-30 backdrop-blur-md flex justify-center items-center'>
+        <div className='w-full  max-w-[1080px] h-full p-10 md:p-40 flex flex-col justify-center items-stretch gap-10  overflow-x-hidden'>
           {typeSequence >= id ? (
             <>
               <div className='w-full h-fit flex flex-col justify-start items-start gap-2'>
@@ -91,7 +91,17 @@ export const SectionScrollPage = (props) => {
     damping: 10,
   })
 
+  const getCurrentSection = () => {
+    const scrollPosition = window.scrollY
+    // Add logic to determine the current section based on scroll position
+    // For simplicity, let's assume each section has a height of 100vh
+    const currentSection = Math.floor(scrollPosition / window.innerHeight) + 1
+    return currentSection
+  }
+
   const [typeSequence, setTypeSequence] = useState(0)
+
+  const [isSequenceDone, setIsSequenceDone] = useState(false)
 
   let sectionStart = 0
 
@@ -111,9 +121,22 @@ export const SectionScrollPage = (props) => {
     })
   }, [typeSequence])
 
+  useEffect(() => {
+    //현재 스크롤 위치가 end보다 크면 setIsSequenceDone(true)
+    if (getCurrentSection() >= Interview.length + 1) {
+      setIsSequenceDone(true)
+    }
+  }, [scrollYProgress])
+
+  console.log(isSequenceDone)
   return (
     <>
-      <section className='w-full fixed transition-all flex flex-col justify-center items-start gap-4 p-4 md:p-20 top-0 h-screen bg-white text-black'>
+      <section
+        className='w-full fixed transition-all flex flex-col justify-center items-start gap-4 p-4 md:p-20 top-0 h-screen bg-white text-black'
+        style={{
+          display: isSequenceDone ? 'none' : 'flex',
+        }}
+      >
         <div className='w-full h-fit pb-1 border-b border-black'>
           <h1 className='w-full h-fit text-2xl md:text-4xl font-[bkkserif]'>{ArtInfo.title}</h1>
           <h3 className='w-full h-fit text-2xl md:text-4xl font-[italianno]'>{ArtInfo.category}</h3>
@@ -185,6 +208,7 @@ export const SectionScrollPage = (props) => {
             />
           )
         })}
+        <section id='end' className='w-full h-screen bg-black'></section>
       </div>
 
       <motion.div className='fixed  top-0 left-0 w-full h-1 bg-white' style={{ scaleX }} />

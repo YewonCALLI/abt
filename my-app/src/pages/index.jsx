@@ -8,8 +8,11 @@ import { Logo } from '@/components/dom/Logo'
 import SplashScreen from '@/components/dom/SplashScreen'
 import { Copyright } from '@/components/dom/Copyright'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 export default function Page(props) {
+  const router = useRouter()
+
   return (
     <>
       <SplashScreen />
@@ -20,10 +23,34 @@ export default function Page(props) {
         <Canvas>
           <Scene map>
             <Map />
-            <Pin position={[5, 0.05, -0.09]} color='#00FF88' />
-            <Pin position={[7, 0.05, -7]} color='#FF66B0' />
-            <Pin position={[2, 0.05, -4]} color='#F0E442' />
-            <Pin position={[-1.1, 0.05, 2.19]} color='#009ACC' />
+            <Pin
+              position={[5, 0.05, -0.09]}
+              color='#00FF88'
+              onClick={() => {
+                router.push('/yewon')
+              }}
+              title='홍연 1.0'
+              artist='Yewon Jang'
+            />
+            <Pin
+              position={[7, 0.05, -7]}
+              color='#FF66B0'
+              onClick={() => {
+                router.push('/jane')
+              }}
+              title='한 가닥'
+              artist='Jane Tao'
+            />
+            <Pin
+              position={[2, 0.05, -4]}
+              color='#F0E442'
+              onClick={() => {
+                router.push('/eunjoung')
+              }}
+              title='골든 에이지'
+              artist='Eunjoung Im'
+            />
+            <Pin position={[-1.1, 0.05, 2.19]} color='#009ACC' title='실버벨' />
 
             {/* <gridHelper args={[100, 100]} scale={0.5} /> */}
           </Scene>
@@ -35,16 +62,24 @@ export default function Page(props) {
   )
 }
 
-function Pin({ position, rotation, children, color }) {
+function Pin({ position, title, artist, children, color, onClick }) {
   return (
     <Html className='content' rotation-x={-Math.PI / 2} position={position} transform occlude>
       <div
-        className='w-10 h-10 rounded-full 
-       flex justify-center items-center cursor-pointer active:scale-90 hover:scale-90 transition-all duration-300 active: md:hover:shadow-xl shadow-white active:opacity-60 md:hover:opacity-60'
-        style={{
-          backgroundColor: color || 'white',
-        }}
+        onClick={onClick}
+        className='w-fit h-fit  
+       flex flex-row gap-2 justify-center items-center cursor-pointer active:scale-90 hover:scale-90 transition-all duration-300 active: md:hover:shadow-xl shadow-white active:opacity-60 md:hover:opacity-60'
       >
+        <div
+          className='w-10 h-10 rounded-full'
+          style={{
+            backgroundColor: color || 'white',
+          }}
+        />
+        <div className='w-fit h-fit flex flex-col justify-center items-start'>
+          <span className='text-sm font-[bkkserif] text-white'>{title}</span>
+          <span className='text-xs font-[italianno] text-white'>{artist}</span>
+        </div>
         {children}
       </div>
     </Html>

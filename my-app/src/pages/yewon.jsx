@@ -8,7 +8,7 @@ export default function Page(props) {
     <>
       <SectionScrollPage ArtInfo={ArtInfo} Interview={Interview}>
         <div className='w-full h-full '>
-          <iframe src='https://www.sejinoh.site/' className='w-full h-full bg-black' />
+          <iframe src='https://hongyeon.vercel.app/' className='w-full h-full bg-black' />
         </div>
       </SectionScrollPage>
     </>

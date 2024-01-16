@@ -1,6 +1,6 @@
 export const ArtInfo = {
-  title: 'Han Gadak(One Thread), 2023',
-  category: 'Interactive Web',
+  title: '한 가닥, 2023',
+  category: 'Han Gadak(One Thread), 2023',
   caption: [
     '인터랙티브 웹 아트',
     '3D 가상 공간 사운드',
