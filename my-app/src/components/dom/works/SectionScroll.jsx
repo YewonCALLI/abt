@@ -234,25 +234,24 @@ export const SectionScrollPage = (props) => {
               />
             )
           })}
-
-          {isSequenceDone && (
-            <section className='fixed top-0 p-10 w-screen h-screen bg-black '>
-              <div className='w-full h-full '>
-                <iframe src={link} className='w-full h-full bg-black ' />
-              </div>
-              <button
-                className='fixed z-50 top-0 right-0 bg-black  text-white
+        </div>
+      )}
+      {isSequenceDone && (
+        <section className='fixed top-0 p-10 w-screen h-screen bg-black '>
+          <div className='w-full h-full '>
+            <iframe src={link} className='w-full h-full bg-black ' />
+          </div>
+          <button
+            className='fixed z-50 top-0 right-0 bg-black  text-white
           w-fit h-fit flex flex-row justify-center items-center text-2xl px-4 
           '
-                onClick={() => {
-                  setIsSequenceDone(false)
-                }}
-              >
-                X
-              </button>
-            </section>
-          )}
-        </div>
+            onClick={() => {
+              setIsSequenceDone(false)
+            }}
+          >
+            X
+          </button>
+        </section>
       )}
       <motion.div className='fixed  top-0 left-0 w-full h-1 bg-white' style={{ scaleX }} />
     </>
