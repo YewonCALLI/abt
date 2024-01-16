@@ -1,0 +1,969 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.back{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  background: rgb(34,193,195);
+  background-image: linear-gradient(#593eff 0%, #fff 100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0095f6;
+}
+
+a:visited {
+  color: white;
+  z-index: 1;
+}
+
+.dps-1>a {
+  color: white;
+}
+
+.dps-2>a {
+  color: white;
+}
+
+#navbar {
+  font-family: 'Pretendard-Regular';
+  font-size: xx-large;
+  width: 98%;
+  top: 2%;
+  color: black;
+  position: absolute;
+  height: 60px;
+  z-index: 1;
+}
+
+#menu {
+  list-style-type: none;
+  line-height: 60px;
+  margin-top: 0px;
+  vertical-align: middle;
+  transform: translate(0%, 0%);
+}
+
+#logo {
+  float: left;
+  margin-left: 3%;
+}
+
+#navbar a {
+  text-decoration: none;
+  color:white;
+  font-family: 'Mulish', sans-serif;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 500;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  display: inline-block;
+  line-height: 60px;
+}
+
+#menu li {
+  float: right;
+}
+
+#menu li a:hover {
+  color: rgb(0, 52, 0);
+}
+
+#menu li a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Mulish', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.row {
+  margin: 20px;
+}
+
+.column {
+  float: left;
+  padding: 20px;
+  height: 600px;
+  margin-bottom: 500px;
+
+}
+
+.column .title {
+  font-family: Pretendard;
+
+}
+
+.column .text1 {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.column .text2 {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.column .logo-image {
+  width: 360px;
+  margin: 29px 24px 3px 29px;
+}
+
+
+.container2 .btn .js-close-modal2 {
+  position: relative;
+  width: 20px;
+  height: 28px;
+  object-fit: contain;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container>.btn {
+  position: absolute;
+  margin: 60px;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 40px;
+}
+
+.container2>.btn2 {
+  position: absolute;
+  margin: 60px;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 40px;
+}
+
+.modal {
+  background: #fff;
+  overflow: scroll;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  margin: 120px 0 0 0;
+  padding: 0 28px 0 28px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+
+  text-align: left;
+
+  .header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    font: 300 24px Lato;
+    position: relative;
+  }
+
+  .body {
+    padding: 20px;
+    font: 300 16px Lato;
+  }
+
+  z-index: 3;
+}
+
+
+.modal2 {
+  display: none;
+  background: #fff;
+  overflow: hidden;
+  position: fixed;
+  width: 35%;
+  height: 20%;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 200px 0 0 0;
+  padding: 0 28px 0 28px;
+  border-radius: 30px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255);
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  text-align: left;
+
+  .body {
+    padding: 20px;
+    font: 300 16px Lato;
+  }
+
+  z-index: 4;
+}
+
+.modal2 .alarm {
+  position: relative;
+  top: 50%;
+  font-family: Pretendard;
+  font-size: 30px;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.container.modal-open .modal {
+  top: 0;
+}
+
+.container2.modal-open .modal2 {
+  display: block;
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.neuron {
+  position: fixed;
+  right: 0%;
+  top: 50%;
+  width: 1029px;
+  height: 672.2px;
+  right: 0px;
+  transform: translate(0%, -50%);
+}
+
+.neuron img {
+
+  position: absolute;
+  object-fit: contain;
+
+}
+
+.digital-performance-study {
+  position: absolute;
+  left: 2.8%;
+  top: 31.8%;
+  transform: rotate(-327.56deg);
+  font-family: Pretendard;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.meeting-with-plannerartists {
+  position: absolute;
+  width: 289.1px;
+  height: 59.1px;
+  left: 280px;
+  top: 298px;
+  margin: 28px 21.9px 19.9px 77px;
+  transform: rotate(-6.64deg);
+  font-family: Pretendard;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.hongyeon-gil-dataset {
+  position: absolute;
+  top: 115px;
+  left: 238px;
+  margin: 19px 85.3px 13px 10px;
+  transform: rotate(-71.53deg);
+  font-family: Pretendard;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.developing-moments {
+  position: absolute;
+  top: 460px;
+  left: 15px;
+  margin: 19.9px 10px 17.1px 78px;
+  transform: rotate(-48.21deg);
+  font-family: Pretendard;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.GO-TO-MUSEUM {
+  position: absolute;
+  left: 260px;
+  top: 450px;
+  margin: 41.9px 32.7px 3.4px 56px;
+  transform: rotate(-296.07deg);
+  font-family: Pretendard;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.dps-1 {
+  position: absolute;
+  width: 0.6%;
+  height: 16%;
+  top: 315px;
+  margin: 23px 0;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.dps-2 {
+  position: absolute;
+  width: 13px;
+  height: 24px;
+  top: -20px;
+  left: -120px;
+  margin: 135px 7px 514px 105.6px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.dps-3 {
+  position: absolute;
+  top: 16.3%;
+  left: 14%;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+
+}
+
+.mwp-1 {
+  position: absolute;
+  top: 186px;
+  left: 480px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.mwp-2 {
+  position: absolute;
+  top: 290px;
+  left: 648px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.mwp-3 {
+  position: absolute;
+  top: 458px;
+  left: 540px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.hgd-1 {
+  position: absolute;
+  top: 35px;
+  left: 200px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.hgd-2 {
+  position: absolute;
+  top: -30px;
+  left: 400px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.hgd-3 {
+  position: absolute;
+  top: 157px;
+  left: 450px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.dm-1 {
+  position: absolute;
+  top: 580px;
+  left: 210px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.dm-2 {
+  position: absolute;
+  top: 625px;
+  left: 28px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.dm-3 {
+  position: absolute;
+  top: 411px;
+  left: -20px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.gm-1 {
+  position: absolute;
+  top: 482px;
+  left: 480px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.gm-2 {
+  position: absolute;
+  top: 627px;
+  left: 220px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.gm-3 {
+  position: absolute;
+  top: 680px;
+  left: 430px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.Copyright-2023-ABT {
+  position: absolute;
+  height: 19px;
+  bottom: 2%;
+  right:0%;
+  margin: 45.8px 28px 9px 18.8px;
+  font-family: 'Mulish', sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+
+  /* Mobile */
+  .abt_logo_1-1 {
+    width: 150%;
+  }
+
+  .column {
+    width: 90%;
+    padding: 0px;
+    margin-bottom: 150px;
+  }
+
+  .column .title {
+    font-size: 20px;
+  }
+
+  .column .text1 {
+    font-size: 16px;
+  }
+
+  .column .text2 {
+    font-size: 16px;
+  }
+
+  .modal {
+    padding: 0 15px 0 15px;
+  }
+
+  .column .logo-image {
+    width: 90%;
+  }
+
+  .neuron {
+    right: 47%;
+    transform: rotate(90deg) translate(0%, -50%);
+  }
+
+  .neuron img {
+    width: 50%;
+  }
+
+  .digital-performance-study {
+    font-size: 12px;
+    top: 110px;
+    left: 10px;
+  }
+
+  .developing-moments {
+    font-size: 12px;
+    top: 215px;
+    left: -60px;
+  }
+
+  .meeting-with-plannerartists {
+    font-size: 12px;
+    top: 108px;
+    left: 90px;
+  }
+
+  .hongyeon-gil-dataset {
+    font-size: 12px;
+    top: 40px;
+    left: 110px;
+  }
+
+  .GO-TO-MUSEUM {
+    font-size: 12px;
+    top: 200px;
+    left: 95px;
+  }
+
+  .dm-1 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 165px;
+    left: -30px;
+  }
+
+  .dm-2 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 60px;
+    left: -50px;
+  }
+
+  .dm-3 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 45px;
+    left: 60px;
+  }
+
+  .dps-1 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 220px;
+    left: 160px;
+  }
+
+  .dps-2 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 160px;
+    left: -100px;
+  }
+
+  .dps-3 a {
+    font-size: 16px;
+  }
+
+  .dps-3 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 200px;
+    left: -40px;
+  }
+
+  .dm-1 a{
+    font-size: 16px;
+  }
+
+  .dm-2 a{
+    font-size: 16px;
+  }
+
+  .dm-3 a{
+    font-size: 16px;
+  }
+
+  .hgd-1 a{
+    font-size: 16px;
+  }
+
+  .hgd-2 a{
+    font-size: 16px;
+  }
+
+  .hgd-3 a{
+    font-size: 16px;
+  }
+
+  .gm-1 a{
+    font-size: 16px;
+  }
+
+  .gm-2 a{
+    font-size: 16px;
+  }
+
+  .gm-3 a{
+    font-size: 16px;
+  }
+
+  .hgd-1 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 10px;
+    left: 90px;
+  }
+  .hgd-1 a{
+    top: 10px;
+    left: 30px;
+  }
+
+  .hgd-2 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: -18px;
+    left: 190px;
+  }
+
+  .hgd-3 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 72px;
+    left: 220px;
+  }
+
+  .mwp-1 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 90px;
+    left: 225px;
+  }
+
+  .mwp-2 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 140px;
+    left: 320px;
+  }
+
+  .mwp-3 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 230px;
+    left: 260px;
+  }
+
+  .mwp-1 a {
+    font-size: 16px;
+  }
+
+  .mwp-2 a {
+    font-size: 16px;
+  }
+
+  .mwp-3 a {
+    font-size: 16px;
+  }
+
+  .gm-1 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 235px;
+    left: 220px;
+  }
+
+  .gm-2 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 334px;
+    left: 210px;
+  }
+
+  .gm-3 {
+    font-size: 16px;
+    transform: rotate(-90deg);
+    top: 315px;
+    left: 100px;
+  }
+
+  .modal2 .alarm {
+    font-size: 20px;
+  }
+
+  #menu li a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1250px) {
+
+  /* Tablet */
+  .column {
+    width: 40%;
+  }
+
+  .abt_logo_1-1 {
+    width: 95%;
+  }
+  .Copyright-2023-ABT {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width:1250px) {
+
+  /* PC */
+  .abt_logo_1-1 {
+    width: 95%;
+  }
+
+  .column {
+    width: 30%;
+  }
+  .Copyright-2023-ABT {
+    font-size: 16px;
+  }
+
+}
+
+/*제이쿼리에서 css를 클래스 형태로 제어하기 위한 애니메이션 클래스*/
+.fadeOut {
+  animation: fadeout 2s;
+  -moz-animation: fadeout 2s;
+  /* Firefox */
+  -webkit-animation: fadeout 2s;
+  /* Safari and Chrome */
+  -o-animation: fadeout 2s;
+  /* Opera */
+  animation-fill-mode: forwards;
+}
+
+#Animation @keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0; 
+    display: none;
+  }
+}
+
+@-moz-keyframes fadeout {
+
+  /* Firefox */
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@-webkit-keyframes fadeout {
+
+  /* Safari and Chrome */
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@-o-keyframes fadeout {
+
+  /* Opera */
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}

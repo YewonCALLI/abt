@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+[![Downloads](https://img.shields.io/npm/dt/create-r3f-app.svg?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/create-r3f-app) [![Discord Shield](https://img.shields.io/discord/740090768164651008?style=flat&colorA=000000&colorB=000000&label=discord&logo=discord&logoColor=ffffff)](https://discord.gg/ZZjjNvJ)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# :japanese_castle: React-Three-Next starter
 
-## Available Scripts
+A minimalist starter for React, React-three-fiber and Threejs.
 
-In the project directory, you can run:
+![](https://user-images.githubusercontent.com/2223602/192515435-a3d2c1bb-b79a-428e-92e5-f44c97a54bf7.jpg)
 
-### `npm start`
+- TTL ~ 100ms
+- First load JS ~ 85Kb
+- Lighthouse score of 100 (Performance, Accessibility, Best Practices, SEO)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This starter allows you to navigate seamlessly between pages with dynamic dom and/or canvas content without reloading or creating a new canvas every time.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ⚫ Demo :
 
-### `npm test`
+[![image](https://user-images.githubusercontent.com/2223602/192515587-eac9e26b-d691-4496-a614-85729764b6b0.jpg)](https://react-three-next.vercel.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### How to use
 
-### `npm run build`
+#### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_Tailwind is the default style. styled-components (styled) is also available._
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+yarn create r3f-app next my-app
+# yarn create r3f-app <next> my-app <tailwind|styled>? -ts?
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+or
 
-### `npm run eject`
+```sh
+npx create-r3f-app next my-app
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### :passport_control: Typescript
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For typescript add the parameter `-ts` or `--typescript`:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+yarn create r3f-app next my-app -ts
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+or
 
-## Learn More
+```sh
+npx create-r3f-app next my-app -ts
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### :memo: Note:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_Regarding the new layout system in next@13_:
+While the app directory is still in beta we are still investigating on the layout implementation, but for now it's more stable to use pages.
+An alternative branch will be available in the near future with the app directory architecture. It will be accessible through the starter CLI. Contribution is welcome
+[Follow the progress of layout implementation here.](https://github.com/pmndrs/react-three-next/issues/103)
 
-### Code Splitting
+### :mount_fuji: Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [x] GLSL imports
+- [x] Template for meta data and header
+- [x] Clean code using ESlint and Prettier
+- [x] VSCode debug profiles for the server, Chrome, and Firefox
+- [x] PWA Support
 
-### Analyzing the Bundle Size
+### :bullettrain_side: Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Inform the nextjs page that the component is a Threejs component. For that, simply add the **canvas** property to the parent component.
 
-### Making a Progressive Web App
+```jsx
+export default function Page(props) {
+  return <div>Hello !</div>
+}
+// Canvas contents go here
+// It will receive same props as Page component (from getStaticProps, etc.)
+Page.canvas = (props) => (
+  <mesh>
+    <boxGeometry />
+    <meshBasicMaterial color='hotpink' />
+  </mesh>
+)
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### :control_knobs: Available Scripts
 
-### Advanced Configuration
+- `yarn dev` - Next dev
+- `yarn analyze` - Generate bundle-analyzer
+- `yarn lint` - Audit code quality
+- `yarn build` - Next build
+- `yarn start` - Next start
+- `yarn export` - Export to static HTML
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### ⬛ Stack
 
-### Deployment
+- [`threejs`](https://github.com/mrdoob/three.js/) &ndash; A lightweight, 3D library with a default WebGL renderer.
+- [`@react-three/fiber`](https://github.com/pmndrs/react-three-fiber) &ndash; A React renderer for Threejs on the web and react-native.
+- [`@react-three/drei` - Optional](https://github.com/pmndrs/drei) &ndash; useful helpers for react-three-fiber
+- [`@react-three/a11y` - Optional](https://github.com/pmndrs/react-three-a11y/) &ndash; Accessibility tools for React Three Fiber
+- [`r3f-perf` - Optional](https://github.com/RenaudRohlinger/r3f-perf) &ndash; Tool to easily monitor react threejs performances.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### How to contribute :
 
-### `npm run build` fails to minify
+```bash
+git clone https://github.com/pmndrs/react-three-next
+&& cd react-three-next && yarn install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Maintainers :
+
+- [`twitter 🐈‍⬛ @onirenaud`](https://twitter.com/onirenaud)

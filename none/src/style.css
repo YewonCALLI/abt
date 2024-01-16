@@ -1,0 +1,567 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: 'HakgyoansimGodeunjemokM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGodeunjemokM.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HakgyoansimGodeunjemokB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGodeunjemokB.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+html,
+body {
+  width:100%;
+  height:100%;
+} 
+
+.back{
+  position: absolute;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  background: rgb(34,193,195);
+  background-image: linear-gradient(#593eff 0%, #fff 100%);
+}
+
+.message2 {
+  position: absolute;
+  right:2.7%;
+  top:9.1%;
+  width: 24.7%;
+  height: 70.9%;
+  flex-grow: 0;
+  margin: 67px 11px 54px 760.6px;
+  padding: 23px 21px 19px 19px;
+  border-radius: 16px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+}
+
+.New-Updates {
+  position: relative;
+  width: 128px;
+  height: 25px;
+  flex-grow: 0;
+  margin: 0 128.3px 16px 4.7px;
+  font-family: Mulish;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.light{
+  position: relative;
+  top:15px;
+
+}
+
+.News_header{
+  position: relative;
+  display: flex;
+  height: 82%;;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.News{
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top:2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start
+}
+
+#news.news_title{
+  position: relative;
+  flex-grow: 0;
+  margin: 10px 0px 0px 20px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: black;
+}
+
+#news a{
+  color: black;
+}
+
+.news_title .text-style-1 {
+  font-size: 12px;
+  animation: blink-effect 1s step-end infinite;
+
+}
+
+.News .alarm {
+  position: relative;
+  width: 53px;
+  height: 14px;
+  top:20px;
+  flex-grow: 0;
+  margin: 1px 1px 419px 62px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.message2 .input_text{
+  position: relative;
+  width: 100%;
+  top: 80%;
+  height: 43px;
+  margin-top:12px;
+  border-radius: 6px;
+  background-color: rgba(190, 190, 190, 0.5);
+}
+.Type-Something {
+  position: relative;
+  top:25%;
+  left:3.7%;
+  width: 111px;
+  height: 19px;
+  font-family: Mulish;
+  font-size: 15px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.logo{
+    width: 100%;
+    height: 100%;
+    left: 0%;
+}
+
+.abt_logo_1-1 {
+    top:50%;
+    left:52%;
+    transform: translate(-50%, -55%);
+    position: absolute;
+    align-content: center;
+    z-index: 0;
+}
+
+#navbar {
+    font-family: Yeasty;
+    font-size:xx-large;
+    width: 98%;
+    top : 2%;
+    left:10px;
+    color:black;
+    position: absolute;
+    height: 60px;
+    z-index: 1;
+  }
+  
+.row{
+  margin: 20px;
+}
+.column {
+  float: left;
+  padding: 20px;
+  height: 600px;
+  margin-bottom: 500px;
+}
+
+.column .title {
+  font-family: 'Pretendard', sans-serif;
+  
+}
+.column .text1 {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.column .text2 {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.column .logo-image{
+  width: 360px;
+  margin: 29px 24px 3px 29px;
+}
+
+.container .btn .js-close-modal{
+  position: relative;
+  width: 27px;
+  height: 28px;
+  object-fit: contain;
+}
+  
+  #menu {
+    list-style-type: none;
+    line-height: 60px;
+    margin-top: 0px;
+    vertical-align: middle;
+    transform: translate(0%,0%);
+  }
+  
+  #logo {
+    float: left;
+    margin-left: 3%;
+  }
+  
+  #navbar a {
+    text-decoration: none;
+    color:white;
+    font-family: 'Mulish', sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 500;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    display: inline-block;
+    line-height: 60px;
+  }
+  
+  #menu li {
+    float: right;
+  }
+  
+  #menu li a:hover{
+    color : rgb(0, 52, 0);
+  }
+  
+  #menu li a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container > .btn {
+  position: absolute;
+  margin: 60px;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 40px;
+}
+
+  .modal {
+    background: #fff;
+    overflow: scroll;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    margin: 120px 0 0 0;
+    padding: 0 28px 0 28px;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+
+    text-align: left;
+    .header {
+      padding:20px;
+      border-bottom: 1px solid #ddd;
+      font: 300 24px Lato;
+      position: relative;
+      }
+    .body {
+      padding: 20px;
+      font: 300 16px Lato;
+    }
+    z-index: 3;
+  }
+  
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    font-family:'Pretendard', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    padding-right: 30px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+  
+  .container.modal-open .modal {
+    top: 0;
+  }
+
+  .LogOut{
+    position: relative;
+    bottom: 20%;
+    left:40px;
+    width: 200px;
+    height: 70px;
+    z-index: 0;
+  }
+
+  .signout_button{
+    position: absolute;
+    bottom: -20%;
+    left: 70px;
+    font-family: 'HakgyoansimGodeunjemokM';
+    font-size:22px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: left;
+    color: #3f3f3f;
+    border: none;
+    cursor: pointer;
+  }
+
+  .signout_arrow{
+    position: relative;
+    width: 51px;
+    left:12px;
+    top:-40px;
+  }
+
+  .signout_image{
+    width: 65px;
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Mobile */
+    .abt_logo_1-1 {
+      width: 150%;
+      left: 52%;
+    }
+    .column{
+      width: 90%;
+      padding: 0px;
+      margin-bottom: 340px;
+    }
+    .column .title{
+      font-size: 20px;
+    }
+    .column .text1{
+      font-size: 16px;
+    }
+    .column .text2{
+      font-size: 16px;
+    }
+    .modal{
+      padding: 0 15px 0 15px;
+    }
+    .column .logo-image{
+      width:90%;
+    }
+    .text1{
+      margin-bottom: 550px;
+    }
+    #menu li a {
+      display: inline-block;
+      text-decoration: none;
+      font-family: 'Mulish', sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      font-stretch: normal;
+      font-style: italic;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      padding-right: 20px;
+      padding-left: 10px;
+    }
+    .LogOut{
+      bottom:13%;
+      left:4%;
+    }
+    .signout_image{
+      width:50px;
+    }
+    .signout_arrow{
+      width:40px;
+      left:5px;
+      top:-25px;
+    }
+    .signout_button{
+      font-size: 15px;
+      top:20px;
+      left: 50px;
+    }
+  }
+
+  .Copyright-2023-ABT {
+    position: absolute;
+    height: 19px;
+    bottom: 2%;
+    right:0%;
+    
+    margin: 45.8px 28px 9px 18.8px;
+    font-family: 'Mulish', sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .message2{
+      width: 220px;
+    }
+    .New-Updates{
+      font-size: 14px;
+      margin: 0px;
+    }
+    #news.news_title{
+      font-size: 14px;
+    }
+    #news.news_title.text-style-1{
+      font-size: 14px;
+    }
+    .News .alarm{
+      margin: 0px;
+    }
+    .mo-message{
+      display: none;
+      position: absolute;
+      top:5%;
+      left:50%;
+      width: 78.9%;
+      height: 12%;
+      flex-grow: 0;
+      margin: 17px 24px 130px 6px;
+      /* padding: 16px 47px 12px 37px; */
+      border-radius: 12px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      background-color: rgba(255, 255, 255, 0.85);
+      transform: translate(-50%,0%);
+      animation: box-move 1s linear forwards;
+    }
+    .mo-News{
+      position: relative;
+      width: 90%;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      justify-content: space-around;
+    }
+    .mo-News .mo-news_title {
+      color: black;
+      font-family: 'Pretendard', sans-serif;
+      font-weight: 600;
+    }
+    .mo-News .mo-light{
+      position: relative;
+      width: 40px;
+    }
+    .mo-news_title .text-style-1{
+      font-size: 12px;
+      font-weight: 500;
+      font-family: 'Pretendard', sans-serif;
+      animation: blink-effect 1s step-end infinite;
+    }
+
+    /* .mo-message .mo-light{
+    } */
+
+  }
+  @media screen and (min-width:768px) and (max-width:1250px) {
+    /* Tablet */
+    .column{
+      width: 40%;
+    }
+    .abt_logo_1-1 {
+      width: 95%;
+    }
+    .Copyright-2023-ABT {
+      font-size: 16px;
+    }
+
+  }
+
+  
+  @media screen and (min-width:1250px) {
+    /* PC */
+    .abt_logo_1-1 {
+      width: 95%;
+    }
+    .column{
+      width: 30%;
+    }
+    .Copyright-2023-ABT {
+      font-size: 16px;
+    }
+
+  }
+
+  @keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+  

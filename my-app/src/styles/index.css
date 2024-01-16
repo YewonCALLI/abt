@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'bkksans';
+  src: url('/fonts/bkk_sans_bold.ttf'
+    );
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bkksansLight';
+  src: url('/fonts/bkk_sans_regular.ttf'
+    );
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bkkserif';
+  src: url('/fonts/bkk_serif.ttf'
+    );
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'italianno';
+  src: url('/fonts/italianno.ttf'
+    );
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: all 0.3s ease-in-out; */
+  }
+
+  html,
+  body,
+  #__next {
+    width: 100%;
+    background: #000;
+    font-family: 'bkksans',
+      sans-serif;
+  }
+
+  html {
+    scroll-snap-type: y mandatory;
+  }
+}
