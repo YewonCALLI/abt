@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
-import { GoArrowDown } from 'react-icons/go'
+import { GoArrowDown, GoArrowLeft } from 'react-icons/go'
 import { is } from '@babel/types'
+import { useRouter } from 'next/router'
 
-function Section({ id, artist, textQ, textA, isSequenceDone, typeSequence, setIsSequenceDone, setSequence }) {
+function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSequence, setIsSequenceDone, setSequence }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref })
 
@@ -24,7 +25,7 @@ function Section({ id, artist, textQ, textA, isSequenceDone, typeSequence, setIs
 
   return (
     <section id={id} ref={ref} className='w-full h-screen'>
-      {!isSequenceDone && (
+      {sequence > 0 && (
         <button
           className='fixed z-50 top-0 right-0   text-white
           w-fit h-fit flex flex-row justify-center items-center text-2xl px-4 py-2
@@ -105,6 +106,8 @@ export const SectionScrollPage = (props) => {
     damping: 10,
   })
 
+  const router = useRouter()
+
   const getCurrentSection = () => {
     const scrollPosition = window.scrollY
     // Add logic to determine the current section based on scroll position
@@ -147,6 +150,17 @@ export const SectionScrollPage = (props) => {
           display: isSequenceDone ? 'none' : 'flex',
         }}
       >
+        <button
+          className='bg-white border border-black text-black
+          w-fit h-fit flex flex-row justify-center items-center text-lg px-2 fixed top-4 left-4 z-50
+          '
+          onClick={() => {
+            router.back()
+          }}
+        >
+          <GoArrowLeft />
+          <span className='ml-2'>뒤로가기</span>
+        </button>
         <div className='w-full h-fit pb-1 border-b border-black'>
           <h1 className='w-full h-fit text-2xl md:text-4xl font-[bkkserif]'>{ArtInfo.title}</h1>
           <h3 className='w-full h-fit text-2xl md:text-4xl font-[italianno]'>{ArtInfo.category}</h3>
@@ -190,7 +204,7 @@ export const SectionScrollPage = (props) => {
         </div>
         <div className='w-full h-fit gap-4 flex justify-start items-center '>
           <button
-            className='bg-white border border-black text-black
+            className='bg-black border border-black text-white
           w-fit h-fit flex flex-row justify-center items-center text-lg px-2
           '
             onClick={() => {
@@ -221,6 +235,7 @@ export const SectionScrollPage = (props) => {
                 id={index + 1}
                 textQ={item.q}
                 textA={item.a}
+                sequence={typeSequence}
                 isSequenceDone={isSequenceDone}
                 typeSequence={typeSequence}
                 setIsSequenceDone={(isDone) => {
