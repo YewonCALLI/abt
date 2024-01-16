@@ -56,7 +56,7 @@ const PanningLimitControls = ({ targetPosition, ...props }) => {
     controls.current && controls.current.update()
   })
 
-  return <MapControls {...props} ref={controls} args={[camera]} target={targetPosition} />
+  return <MapControls {...props} ref={controls} args={[camera]} enableZoom={false} target={targetPosition} />
 }
 
 const Scene = ({ children, orbit, map, ...props }) => {

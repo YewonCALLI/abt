@@ -53,7 +53,7 @@ export default function Page(props) {
               artist='Eunjoung Im'
               add='홍연길'
             />
-            <Pin position={[-1.1, 0.05, 2.19]} color='#009ACC' title='실버벨' add='달동네' />
+            <Pin position={[-1.1, 0.05, 2.19]} color='#009ACC' title='실버벨' add='주택가' />
 
             {/* <gridHelper args={[100, 100]} scale={0.5} /> */}
           </Scene>
@@ -79,7 +79,7 @@ function Pin({ position, add, title, artist, children, color, onClick }) {
             backgroundColor: color || 'white',
           }}
         >
-          <p className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xs w-fit h-fit text-center'>
+          <p className='absolute top-1/2 left-1/2 w-[100px] -translate-x-1/2 -translate-y-1/2 text-black text-xs h-fit text-center'>
             {add}
           </p>
         </div>
