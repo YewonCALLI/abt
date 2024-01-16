@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import { GoArrowDown } from 'react-icons/go'
+import { is } from '@babel/types'
 
 function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) {
   const ref = useRef(null)
@@ -121,14 +122,6 @@ export const SectionScrollPage = (props) => {
     })
   }, [typeSequence])
 
-  useEffect(() => {
-    //현재 스크롤 위치가 end보다 크면 setIsSequenceDone(true)
-    if (getCurrentSection() >= Interview.length + 1) {
-      setIsSequenceDone(true)
-    }
-  }, [scrollYProgress])
-
-  console.log(isSequenceDone)
   return (
     <>
       <section
@@ -178,7 +171,17 @@ export const SectionScrollPage = (props) => {
           <div className='fixed z-10 top-0 w-full h-full bg-white bg-opacity-30 backdrop-blur-xl'></div>
           {children}
         </div>
-        <div className='w-full h-fit flex justify-start items-center '>
+        <div className='w-full h-fit gap-4 flex justify-start items-center '>
+          <button
+            className='bg-white border border-black text-black
+          w-fit h-fit flex flex-row justify-center items-center text-lg px-2
+          '
+            onClick={() => {
+              setIsSequenceDone(true)
+            }}
+          >
+            작품보기
+          </button>
           <button
             className='bg-white border border-black text-black
           w-fit h-fit flex flex-row justify-center items-center text-lg px-2
@@ -190,7 +193,7 @@ export const SectionScrollPage = (props) => {
         </div>
       </section>
       <div className='w-full h-screen'>
-        <section className='w-full h-screen bg-black'></section>
+        <section className='w-full h-screen '></section>
         {Interview.map((item, index) => {
           return (
             <Section
@@ -208,11 +211,23 @@ export const SectionScrollPage = (props) => {
             />
           )
         })}
-        <section className='w-full h-screen'>
-          <div className='w-full h-full '>
-            <iframe src={link} className='w-full h-full' />
-          </div>
-        </section>
+        {isSequenceDone && (
+          <section className='fixed top-0 p-10 w-screen h-screen bg-black '>
+            <div className='w-full h-full '>
+              <iframe src={link} className='w-full h-full bg-black ' />
+            </div>
+            <button
+              className='fixed z-50 top-0 right-0 bg-black  text-white
+          w-fit h-fit flex flex-row justify-center items-center text-2xl px-4 
+          '
+              onClick={() => {
+                setIsSequenceDone(false)
+              }}
+            >
+              X
+            </button>
+          </section>
+        )}
       </div>
 
       <motion.div className='fixed  top-0 left-0 w-full h-1 bg-white' style={{ scaleX }} />

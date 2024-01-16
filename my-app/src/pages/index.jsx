@@ -27,8 +27,8 @@ export default function Page(props) {
               position={[-2, 0.05, -2]}
               color='#00FF88'
               onClick={() => {
-                // router.push('/yewon')
-                window.open('https://hongyeon.vercel.app/')
+                router.push('/yewon')
+                // window.open('https://hongyeon.vercel.app/')
               }}
               title='홍연 1.0'
               artist='Yewon Jang'
@@ -38,8 +38,8 @@ export default function Page(props) {
               position={[2, 0.05, -4]}
               color='#FF66B0'
               onClick={() => {
-                // router.push('/jane')
-                window.open('https://onethread.vercel.app/')
+                router.push('/jane')
+                // window.open('https://onethread.vercel.app/')
               }}
               title='한 가닥'
               artist='Jane Tao'
@@ -49,8 +49,8 @@ export default function Page(props) {
               position={[7, 0.05, -7]}
               color='#F0E442'
               onClick={() => {
-                // router.push('/eunjoung')
-                window.open('https://youtu.be/5xtOz-RHkaQ')
+                router.push('/eunjoung')
+                // window.open('https://youtu.be/5xtOz-RHkaQ')
               }}
               title='골든 에이지'
               artist='Eunjoung Im'
