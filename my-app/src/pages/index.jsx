@@ -28,7 +28,7 @@ export default function Page(props) {
               color='#00FF88'
               onClick={() => {
                 // router.push('/yewon')
-                window.open('https://hongyeon.vercel.app//')
+                window.open('https://hongyeon.vercel.app/')
               }}
               title='홍연 1.0'
               artist='Yewon Jang'
