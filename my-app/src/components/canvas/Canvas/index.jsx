@@ -8,7 +8,7 @@ export const Canvas = (props) => {
       {...props}
       frameloop='demand'
       orthographic
-      camera={{ position: [0, 10, 0], zoom: 70, far: 10000 }}
+      camera={{ position: [0, 15, 0], zoom: 70, far: 10000 }}
       dpr={[1, 2]}
       shadows
     >

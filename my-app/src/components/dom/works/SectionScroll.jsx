@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation'
 import { GoArrowDown } from 'react-icons/go'
 import { is } from '@babel/types'
 
-function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) {
+function Section({ id, artist, textQ, textA, isSequenceDone, typeSequence, setIsSequenceDone, setSequence }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref })
 
@@ -24,6 +24,19 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
 
   return (
     <section id={id} ref={ref} className='w-full h-screen'>
+      {!isSequenceDone && (
+        <button
+          className='fixed z-50 top-0 right-0   text-white
+          w-fit h-fit flex flex-row justify-center items-center text-2xl px-4 py-2
+          '
+          onClick={() => {
+            setSequence(0)
+          }}
+        >
+          X
+        </button>
+      )}
+
       <div className='w-full h-full bg-black bg-opacity-30 backdrop-blur-md flex justify-center items-center'>
         <div className='w-full  max-w-[1080px] h-full p-10 md:p-40 flex flex-col justify-center items-stretch gap-10  overflow-x-hidden'>
           {typeSequence >= id ? (
@@ -122,6 +135,10 @@ export const SectionScrollPage = (props) => {
     })
   }, [typeSequence])
 
+  useEffect(() => {
+    typeSequence === 0 && window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [typeSequence])
+
   return (
     <>
       <section
@@ -192,44 +209,51 @@ export const SectionScrollPage = (props) => {
           </button>
         </div>
       </section>
-      <div className='w-full h-screen'>
-        <section className='w-full h-screen '></section>
-        {Interview.map((item, index) => {
-          return (
-            <Section
-              key={index}
-              artist={ArtInfo.name}
-              id={index + 1}
-              textQ={item.q}
-              textA={item.a}
-              typeSequence={typeSequence}
-              setIsSequenceDone={(isDone) => {
-                if (isDone) {
-                  setTypeSequence(typeSequence + 1)
-                }
-              }}
-            />
-          )
-        })}
-        {isSequenceDone && (
-          <section className='fixed top-0 p-10 w-screen h-screen bg-black '>
-            <div className='w-full h-full '>
-              <iframe src={link} className='w-full h-full bg-black ' />
-            </div>
-            <button
-              className='fixed z-50 top-0 right-0 bg-black  text-white
+      {Interview && (
+        <div className='w-full h-screen'>
+          <section className='w-full h-screen '></section>
+
+          {Interview.map((item, index) => {
+            return (
+              <Section
+                key={index}
+                artist={ArtInfo.name}
+                id={index + 1}
+                textQ={item.q}
+                textA={item.a}
+                isSequenceDone={isSequenceDone}
+                typeSequence={typeSequence}
+                setIsSequenceDone={(isDone) => {
+                  if (isDone) {
+                    setTypeSequence(typeSequence + 1)
+                  }
+                }}
+                setSequence={(sequence) => {
+                  setTypeSequence(sequence)
+                }}
+              />
+            )
+          })}
+
+          {isSequenceDone && (
+            <section className='fixed top-0 p-10 w-screen h-screen bg-black '>
+              <div className='w-full h-full '>
+                <iframe src={link} className='w-full h-full bg-black ' />
+              </div>
+              <button
+                className='fixed z-50 top-0 right-0 bg-black  text-white
           w-fit h-fit flex flex-row justify-center items-center text-2xl px-4 
           '
-              onClick={() => {
-                setIsSequenceDone(false)
-              }}
-            >
-              X
-            </button>
-          </section>
-        )}
-      </div>
-
+                onClick={() => {
+                  setIsSequenceDone(false)
+                }}
+              >
+                X
+              </button>
+            </section>
+          )}
+        </div>
+      )}
       <motion.div className='fixed  top-0 left-0 w-full h-1 bg-white' style={{ scaleX }} />
     </>
   )

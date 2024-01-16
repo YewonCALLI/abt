@@ -1,6 +1,6 @@
 export const ArtInfo = {
   title: '홍연 1.0, 2023',
-  category: 'HongYeon 1.0, 202',
+  category: 'HongYeon 1.0, 2023',
   caption: [
     '챗봇형 AI',
     '챗 GPT3.5',

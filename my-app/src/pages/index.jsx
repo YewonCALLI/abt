@@ -46,7 +46,7 @@ export default function Page(props) {
               add='강원종합포장'
             />
             <Pin
-              position={[7, 0.05, -7]}
+              position={[-6, 0.05, 0]}
               color='#F0E442'
               onClick={() => {
                 router.push('/eunjoung')
@@ -56,8 +56,16 @@ export default function Page(props) {
               artist='Eunjoung Im'
               add='홍연길'
             />
-            <Pin position={[-1.1, 0.05, 2.19]} color='#009ACC' title='실버벨' add='주택가' />
-
+            <Pin
+              position={[-1.1, 0.05, 2.19]}
+              color='#009ACC'
+              title='실버벨'
+              add='주택가'
+              onClick={() => {
+                router.push('/silverbell')
+                // window.open('https://onethread.vercel.app/')
+              }}
+            />
             {/* <gridHelper args={[100, 100]} scale={0.5} /> */}
           </Scene>
         </Canvas>
