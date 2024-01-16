@@ -84,7 +84,7 @@ function Section({ id, artist, textQ, textA, typeSequence, setIsSequenceDone }) 
 }
 
 export const SectionScrollPage = (props) => {
-  const { Interview, ArtInfo, children } = props
+  const { Interview, ArtInfo, children, link } = props
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 1000,
@@ -208,7 +208,11 @@ export const SectionScrollPage = (props) => {
             />
           )
         })}
-        <section id='end' className='w-full h-screen bg-black'></section>
+        <section className='w-full h-screen'>
+          <div className='w-full h-full '>
+            <iframe src={link} className='w-full h-full' />
+          </div>
+        </section>
       </div>
 
       <motion.div className='fixed  top-0 left-0 w-full h-1 bg-white' style={{ scaleX }} />
