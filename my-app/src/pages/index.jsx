@@ -50,7 +50,7 @@ export default function Page(props) {
               color='#F0E442'
               onClick={() => {
                 // router.push('/eunjoung')
-                window.open('https://www.youtube.com/embed/2Z4m4lnjxkY')
+                window.open('https://youtu.be/5xtOz-RHkaQ')
               }}
               title='골든 에이지'
               artist='Eunjoung Im'
