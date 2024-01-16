@@ -6,7 +6,11 @@ import { ArtInfo, Interview } from '@/components/dom/works/data/eunjoung'
 export default function Page(props) {
   return (
     <>
-      <SectionScrollPage ArtInfo={ArtInfo} Interview={Interview} link={'https://youtu.be/5xtOz-RHkaQ'}>
+      <SectionScrollPage
+        ArtInfo={ArtInfo}
+        Interview={Interview}
+        link={'https://www.youtube.com/embed/5xtOz-RHkaQ?si=BZDJUoG25uJ57c2Q'}
+      >
         <div className='w-full h-full '>
           <iframe
             src='
