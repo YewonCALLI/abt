@@ -9,12 +9,12 @@ export default function Page(props) {
       <SectionScrollPage
         ArtInfo={ArtInfo}
         Interview={Interview}
-        link={'https://www.youtube.com/embed/5xtOz-RHkaQ?si=BZDJUoG25uJ57c2Q'}
+        link={'https://player.vimeo.com/video/903631590?h=dde2131ccb&title=0&byline=0&portrait=0'}
       >
         <div className='w-full h-full '>
           <iframe
             src='
-          https://www.youtube.com/embed/5xtOz-RHkaQ?si=BZDJUoG25uJ57c2Q
+          https://player.vimeo.com/video/903631590?h=dde2131ccb&title=0&byline=0&portrait=0
           '
             className='w-full h-full bg-black'
           />

@@ -1,8 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
-import { GoArrowDown, GoArrowLeft } from 'react-icons/go'
-import { is } from '@babel/types'
+import { GoArrowDown, GoArrowLeft, GoXCircle } from 'react-icons/go'
 import { useRouter } from 'next/router'
 
 function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSequence, setIsSequenceDone, setSequence }) {
@@ -27,14 +26,15 @@ function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSeque
     <section id={id} ref={ref} className='w-full h-screen'>
       {sequence > 0 && (
         <button
-          className='fixed z-50 top-0 right-0   text-white
-          w-fit h-fit flex flex-row justify-center items-center text-2xl px-4 py-2
+          className='fixed z-50 top-0 right-0 text-white
+          w-fit h-fit flex flex-row justify-center items-center text-2xl p-4
+          md:hover:opacity-50 transition-all duration-300 active:opacity-50
           '
           onClick={() => {
             setSequence(0)
           }}
         >
-          X
+          <GoXCircle />
         </button>
       )}
 
@@ -153,6 +153,7 @@ export const SectionScrollPage = (props) => {
         <button
           className='bg-white border border-black text-black
           w-fit h-fit flex flex-row justify-center items-center text-lg px-2 fixed top-4 left-4 z-50
+          md:hover:bg-black md:hover:text-white transition-all duration-300 active:bg-black active:text-white
           '
           onClick={() => {
             router.back()
@@ -206,6 +207,7 @@ export const SectionScrollPage = (props) => {
           <button
             className='bg-black border border-black text-white
           w-fit h-fit flex flex-row justify-center items-center text-lg px-2
+          md:hover:bg-white md:hover:text-black transition-all duration-300 active:bg-white active:text-black
           '
             onClick={() => {
               setIsSequenceDone(true)
@@ -215,7 +217,7 @@ export const SectionScrollPage = (props) => {
           </button>
           <button
             className='bg-white border border-black text-black
-          w-fit h-fit flex flex-row justify-center items-center text-lg px-2
+          w-fit h-fit flex flex-row justify-center items-center text-lg px-2 md:hover:bg-black md:hover:text-white transition-all duration-300 active:bg-black active:text-white
           '
             onClick={scrollToStart}
           >
@@ -257,14 +259,15 @@ export const SectionScrollPage = (props) => {
             <iframe src={link} className='w-full h-full bg-black ' />
           </div>
           <button
-            className='fixed z-50 top-0 right-0 bg-black  text-white
-          w-fit h-fit flex flex-row justify-center items-center text-2xl px-4 
+            className='fixed z-50 top-0 right-0  text-white
+          w-fit h-fit flex flex-row justify-center items-center text-2xl p-4
+          md:hover:opacity-50 transition-all duration-300 active:opacity-50
           '
             onClick={() => {
               setIsSequenceDone(false)
             }}
           >
-            X
+            <GoXCircle />
           </button>
         </section>
       )}
