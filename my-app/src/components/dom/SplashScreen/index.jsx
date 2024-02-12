@@ -19,7 +19,7 @@ export default function SplashScreen(props) {
         >
           <Image src='/img/logo-color.png' width={100} height={100} alt='logo' />
           <TypeAnimation
-            className='text-black bg-white text-xl px-2 '
+            className='text-black bg-white text-xl mt-4 px-2 '
             sequence={[
               '도전! 실버벨 : 홍연길 프로젝트',
               1000,
@@ -28,6 +28,12 @@ export default function SplashScreen(props) {
               },
             ]}
           />
+          <div className='text-white gap-2 justify-center items-center flex flex-col mt-6 text-xs'>
+            <p className='text-lg'>아바타(ABT)</p>
+            <p>기획 | 최은총</p>
+            <p>작가 | 도재인, 임은정, 장예원</p>
+            <p>협력 | 오세진</p>
+          </div>
         </MotionDiv>
       )}
     </AnimatePresence>
