@@ -69,8 +69,8 @@ export default function Page(props) {
             {/* <gridHelper args={[100, 100]} scale={0.5} /> */}
           </Scene>
         </Canvas>
-        <Logo className='absolute bottom-0 right-0 z-20' />
-        <Copyright className='absolute bottom-0 left-0 z-20' />
+        <Logo className='fixed bottom-0 right-0 z-20' />
+        <Copyright className='fixed bottom-0 left-0 z-20' />
       </div>
     </>
   )
