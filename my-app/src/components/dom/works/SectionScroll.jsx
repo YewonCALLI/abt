@@ -28,10 +28,10 @@ function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSeque
         <>
           <div
             className='
-      fixed z-50 bottom-4 left-4 w-fit h-fit flex flex-row justify-center items-center text-white opacity-50 text-xs md:text-sm
+      fixed z-50 bottom-4 left-4 w-fit h-fit flex flex-row justify-center items-center text-white opacity-70 text-xs md:text-sm
       '
           >
-            인터뷰어/인터뷰 정리: 최은총
+            인터뷰어/인터뷰 정리 | 최은총
           </div>
           <button
             className='fixed z-50 top-0 right-0 text-white
@@ -233,7 +233,7 @@ export const SectionScrollPage = (props) => {
             작품 인터뷰 보기 <GoArrowDown />
           </button>
         </div>
-        <p className='text-xs text-white opacity-70'>인터뷰어/인터뷰 정리: 최은총</p>
+        <p className='text-md text-white'>인터뷰어/인터뷰 정리 | 최은총</p>
       </section>
       {Interview && (
         <div className='w-full h-screen'>
