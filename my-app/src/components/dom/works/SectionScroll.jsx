@@ -233,7 +233,7 @@ export const SectionScrollPage = (props) => {
             작품 인터뷰 보기 <GoArrowDown />
           </button>
         </div>
-        <p className='text-md text-white'>인터뷰어/인터뷰 정리 | 최은총</p>
+        <p className='text-md'>* 인터뷰어/인터뷰 정리 | 최은총</p>
       </section>
       {Interview && (
         <div className='w-full h-screen'>

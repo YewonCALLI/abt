@@ -17,9 +17,28 @@ export default function Page(props) {
     <>
       <SplashScreen />
       <div className='fixed z-0 w-full h-screen'>
-        <div className='w-1/2 h-fit fixed top-4 left-4'>
+        <div
+          onClick={() => {
+            router.push('/')
+          }}
+          className='w-1/2 h-fit fixed top-4 left-4
+          flex justify-center items-center cursor-pointer transition-all duration-300 active: md:hover:shadow-xl shadow-white active:opacity-60 md:hover:opacity-60 z-20'
+        >
           <Image src='/img/title.svg' width={1000} height={100} />
         </div>
+        <button
+          onClick={() => {
+            router.push('/archive')
+          }}
+          className='w-fit h-fit fixed top-4 right-4
+          flex flex-row gap-2 justify-center items-center cursor-pointer active:bg-white active:text-black hover:bg-white hover:text-black transition-all duration-300 active: md:hover:shadow-xl shadow-white z-20 bg-black px-4 py-1 border-white border rounded-full text-white font-[bkkserif] text-md md:text-xl'
+        >
+          <span className='w-2 h-2 rounded-full bg-[#00FF88]'></span>
+          <span className='w-2 h-2 rounded-full bg-[#FF66B0]'></span>
+          <span className='w-2 h-2 rounded-full bg-[#F0E442]'></span>
+          <span className='w-2 h-2 rounded-full bg-[#009ACC]'></span>
+          Archive
+        </button>
         <Canvas>
           <Scene map>
             <Map />

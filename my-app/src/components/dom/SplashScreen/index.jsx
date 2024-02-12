@@ -17,9 +17,9 @@ export default function SplashScreen(props) {
           exit={{ opacity: 0 }}
           className='fixed bg-black  top-0 left-0 z-50 flex flex-col items-center justify-center w-screen h-screen text-5xl  '
         >
-          <Image src='/img/logo-color.png' width={100} height={100} alt='logo' />
+          <Image src='/img/logo.png' width={100} height={100} alt='logo' />
           <TypeAnimation
-            className='text-black bg-white text-xl mt-4 px-2 '
+            className='text-white text-xl mt-4 px-2 '
             sequence={[
               '도전! 실버벨 : 홍연길 프로젝트',
               1000,
