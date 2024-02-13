@@ -102,8 +102,8 @@ export default function Page(props) {
             {/* <div className='w-full h-fit p-10'>
               <Image src='/img/titleblack.svg' width={1200} height={100} />
             </div> */}
-            <div className='w-full h-fit p-10 flex flex-col gap-2'>
-              <h3 className='text-lg'>
+            <div className='w-full h-fit p-6 md:p-10 flex flex-col gap-2'>
+              <h3 className='text-xl'>
                 {'<'}도전! 실버벨 프로젝트 The Silver Bell Challenge{'>'}
               </h3>
               <p className='text-sm'>
@@ -233,7 +233,7 @@ export default function Page(props) {
               >
                 웹 포스터 보기
               </button>
-              <div className='w-full h-50 md:h-30' />
+              <div className='w-full h-[100px] md:h-30' />
             </div>
           </div>
         </div>
