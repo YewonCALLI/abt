@@ -189,8 +189,8 @@ export default function Page(props) {
                 <br />
                 리서치 방향과 범위는 다음과 같다.
               </p>
-              <div className='mt-4 w-full h-fit'>
-                <Image src='/img/table.svg' width={1200} height={100} />
+              <div className='mt-4 w-full max-w-[480px] h-fit'>
+                <Image src='/img/table.svg' width={600} height={100} />
               </div>
               <p className='mt-4 text-sm'>글, 리서치 | 최은총</p>
               <div className='w-full h-fit mt-4'>
