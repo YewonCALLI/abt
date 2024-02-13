@@ -48,7 +48,7 @@ function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSeque
       )}
 
       <div className='w-full h-full bg-black bg-opacity-30 backdrop-blur-md flex justify-center items-center'>
-        <div className='w-full  max-w-[1080px] h-full p-10 md:p-40 flex flex-col justify-center items-stretch gap-10  overflow-x-hidden'>
+        <div className='w-full  max-w-[1080px] h-full p-10 md:p-40 flex flex-col justify-start items-start  gap-10  overflow-x-hidden'>
           {typeSequence >= id ? (
             <>
               <div className='w-full h-fit flex flex-col justify-start items-start gap-2'>
