@@ -33,74 +33,74 @@ export default function Page(props) {
         </button>
         <div className='w-full h-screen flex flex-col md:flex-row justify-center items-center'>
           <div className='block md:hidden w-full h-[50vh]'>
-            <Swiper spaceBetween={50} slidesPerView={1} scrollbar={{ draggable: true }}>
+            <Swiper spaceBetween={50} pagination slidesPerView={1} scrollbar={{ draggable: true }}>
               <SwiperSlide>
-                <Image src='/img/img_1.png' width={600} height={100} />
+                <Image src='/img/img_1.png' width={1200} height={100} />
               </SwiperSlide>
               <SwiperSlide>
-                <Image src='/img/img_2.png' width={600} height={100} />
+                <Image src='/img/img_2.png' width={1200} height={100} />
               </SwiperSlide>
               <SwiperSlide>
-                <Image src='/img/img_3.png' width={600} height={100} />
+                <Image src='/img/img_3.png' width={1200} height={100} />
               </SwiperSlide>
               <SwiperSlide>
-                <Image src='/img/img_4.png' width={600} height={100} />
+                <Image src='/img/img_4.png' width={1200} height={100} />
               </SwiperSlide>
               <SwiperSlide>
-                <Image src='/img/img_5.png' width={600} height={100} />
+                <Image src='/img/img_5.png' width={1200} height={100} />
               </SwiperSlide>
               <SwiperSlide>
-                <Image src='/img/img_6.png' width={600} height={100} />
+                <Image src='/img/img_6.png' width={1200} height={100} />
               </SwiperSlide>
               <SwiperSlide>
-                <Image src='/img/img_7.png' width={600} height={100} />
+                <Image src='/img/img_7.png' width={1200} height={100} />
               </SwiperSlide>
               <SwiperSlide>
-                <Image src='/img/img_8.png' width={600} height={100} />
+                <Image src='/img/img_8.png' width={1200} height={100} />
               </SwiperSlide>
               <SwiperSlide>
-                <Image src='/img/img_9.png' width={600} height={100} />
+                <Image src='/img/img_9.png' width={1200} height={100} />
               </SwiperSlide>
               <SwiperSlide>
-                <Image src='/img/img_10.png' width={600} height={100} />
+                <Image src='/img/img_10.png' width={1200} height={100} />
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className='md:flex w-full h-1/3 md:h-full hidden flex-row md:flex-col whitespace-nowrap	md:whitespace-normal md:overflow-y-scroll'>
+          <div className='md:flex w-full h-full hidden flex-col overflow-y-scroll'>
             <div className='w-full h-full'>
-              <Image src='/img/img_1.png' width={600} height={100} />
+              <Image src='/img/img_1.png' width={1200} height={100} />
             </div>
             <div className='w-full h-fit'>
-              <Image src='/img/img_2.png' width={600} height={100} />
+              <Image src='/img/img_2.png' width={1200} height={100} />
             </div>
             <div className='w-full h-fit'>
-              <Image src='/img/img_3.png' width={600} height={100} />
+              <Image src='/img/img_3.png' width={1200} height={100} />
             </div>
             <div className='w-full h-fit'>
-              <Image src='/img/img_4.png' width={600} height={100} />
+              <Image src='/img/img_4.png' width={1200} height={100} />
             </div>
             <div className='w-full h-fit'>
-              <Image src='/img/img_5.png' width={600} height={100} />
+              <Image src='/img/img_5.png' width={1200} height={100} />
             </div>
             <div className='w-full h-fit'>
-              <Image src='/img/img_6.png' width={600} height={100} />
+              <Image src='/img/img_6.png' width={1200} height={100} />
             </div>
             <div className='w-full h-fit'>
-              <Image src='/img/img_7.png' width={600} height={100} />
+              <Image src='/img/img_7.png' width={1200} height={100} />
             </div>
             <div className='w-full h-fit'>
-              <Image src='/img/img_8.png' width={600} height={100} />
+              <Image src='/img/img_8.png' width={1200} height={100} />
             </div>
             <div className='w-full h-fit'>
-              <Image src='/img/img_9.png' width={600} height={100} />
+              <Image src='/img/img_9.png' width={1200} height={100} />
             </div>
             <div className='w-full h-fit'>
-              <Image src='/img/img_10.png' width={600} height={100} />
+              <Image src='/img/img_10.png' width={1200} height={100} />
             </div>
           </div>
           <div className='w-full h-full overflow-y-scroll bg-[#00FF88]'>
             <div className='w-full h-fit p-10'>
-              <Image src='/img/titleblack.svg' width={600} height={100} />
+              <Image src='/img/titleblack.svg' width={1200} height={100} />
             </div>
             <div className='w-full h-fit px-10 flex flex-col gap-2'>
               <h3 className='text-md'>
@@ -190,7 +190,7 @@ export default function Page(props) {
                 리서치 방향과 범위는 다음과 같다.
               </p>
               <div className='mt-4 w-full h-fit'>
-                <Image src='/img/table.png' width={600} height={100} />
+                <Image src='/img/table.png' width={1200} height={100} />
               </div>
               <p className='mt-4 text-sm'>글, 리서치 | 최은총</p>
               <div className='w-full h-fit mt-4'>
