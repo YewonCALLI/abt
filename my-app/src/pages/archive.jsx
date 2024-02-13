@@ -219,11 +219,10 @@ export default function Page(props) {
               >
                 웹 포스터 보기
               </button>
-              <div className='w-full h-20 md:h-30' />
+              <div className='w-full h-50 md:h-30' />
             </div>
           </div>
         </div>
-        <Logo className='fixed bottom-0 right-0 z-20' />
       </div>
     </>
   )
