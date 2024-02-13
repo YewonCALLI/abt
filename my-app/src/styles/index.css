@@ -53,6 +53,10 @@
       sans-serif;
   }
 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   html {
     scroll-snap-type: y mandatory;
   }

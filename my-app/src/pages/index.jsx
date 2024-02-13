@@ -15,7 +15,7 @@ export default function Page(props) {
 
   return (
     <>
-      <SplashScreen />
+      {/* <SplashScreen /> */}
       <div className='fixed z-0 w-full h-screen'>
         <div
           onClick={() => {
