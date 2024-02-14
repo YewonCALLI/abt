@@ -4,7 +4,18 @@ import { TypeAnimation } from 'react-type-animation'
 import { GoArrowDown, GoArrowLeft, GoXCircle } from 'react-icons/go'
 import { useRouter } from 'next/router'
 
-function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSequence, setIsSequenceDone, setSequence }) {
+function Section({
+  id,
+  artist,
+  textQ,
+  textA,
+  isSequenceDone,
+  sequence,
+  typeSequence,
+  setIsSequenceDone,
+  setSequence,
+  onExitPress,
+}) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref })
 
@@ -40,6 +51,7 @@ function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSeque
           '
             onClick={() => {
               setSequence(0)
+              onExitPress()
             }}
           >
             <GoXCircle />
@@ -47,8 +59,8 @@ function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSeque
         </>
       )}
 
-      <div className='w-full h-full bg-black bg-opacity-30 backdrop-blur-md flex justify-center items-center'>
-        <div className='w-full  max-w-[1080px] h-full p-10 md:p-40 flex flex-col justify-start items-start  gap-10  overflow-x-hidden'>
+      <div className='w-full h-full bg-white bg-opacity-30 backdrop-blur-md flex justify-center items-center'>
+        <div className='w-full  max-w-[1080px] h-screen p-10 md:p-40 flex flex-col justify-start items-start gap-10  overflow-x-hidden'>
           {typeSequence >= id ? (
             <>
               <div className='w-full h-fit flex flex-col justify-start items-start gap-2'>
@@ -62,7 +74,7 @@ function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSeque
                   ]}
                   speed={50}
                   cursor={false}
-                  className='w-full text-sm md:text-xl text-left text-white break-keep '
+                  className='w-full text-md md:text-xl text-left text-white break-keep '
                 />
               </div>
               <div className='w-full h-fit flex flex-col-reverse justify-end items-end gap-2'>
@@ -77,7 +89,7 @@ function Section({ id, artist, textQ, textA, isSequenceDone, sequence, typeSeque
                       ]}
                       cursor={false}
                       speed={50}
-                      className='w-full text-sm md:text-xl text-left text-white break-keep
+                      className='w-full text-md md:text-xl text-left text-white break-keep
                       '
                     />
                     <Badge>{artist}</Badge>
@@ -125,6 +137,8 @@ export const SectionScrollPage = (props) => {
     return currentSection
   }
 
+  const [isTypeStart, setIsTypeStart] = useState(false)
+
   const [typeSequence, setTypeSequence] = useState(0)
 
   const [isSequenceDone, setIsSequenceDone] = useState(false)
@@ -136,8 +150,9 @@ export const SectionScrollPage = (props) => {
   }
 
   const scrollToStart = () => {
+    setIsTypeStart(true)
     setTypeSequence(1)
-    window.scrollTo({ top: sectionStart, behavior: 'smooth' })
+    // window.scrollTo({ top: sectionStart, behavior: 'smooth' })
   }
 
   useEffect(() => {
@@ -147,14 +162,16 @@ export const SectionScrollPage = (props) => {
     })
   }, [typeSequence])
 
-  useEffect(() => {
-    typeSequence === 0 && window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [typeSequence])
+  // useEffect(() => {
+  //   typeSequence === 0 && window.scrollTo({ top: 0, behavior: 'smooth' })
+  // }, [typeSequence])
+
+  console.log('isTypeStart', isTypeStart)
 
   return (
     <>
       <section
-        className='w-full fixed transition-all flex flex-col justify-center items-start gap-4 p-4 md:p-20 top-0 h-screen bg-white text-black'
+        className='w-full transition-all flex flex-col justify-center items-start gap-4 p-4 md:p-20 top-0 h-full min-h-screen bg-white text-black'
         style={{
           display: isSequenceDone ? 'none' : 'flex',
         }}
@@ -171,6 +188,7 @@ export const SectionScrollPage = (props) => {
           <GoArrowLeft />
           <span className='ml-2'>뒤로가기</span>
         </button>
+        <div className='w-full h-[70svh]'>{children}</div>
         <div className='w-full h-fit pb-1 border-b border-black'>
           <h1 className='w-full h-fit text-2xl md:text-4xl font-[bkkserif]'>{ArtInfo.title}</h1>
           <h3 className='w-full h-fit text-2xl md:text-4xl font-[italianno]'>{ArtInfo.category}</h3>
@@ -180,7 +198,7 @@ export const SectionScrollPage = (props) => {
             return (
               <span
                 key={index}
-                className='w-fit h-fit text-xxs md:text-xs bg-black text-white px-1 font-[bkksansLight] '
+                className='w-fit h-fit text-sm md:text-md bg-black text-white px-1 font-[bkksansLight] '
               >
                 {item}
               </span>
@@ -189,15 +207,15 @@ export const SectionScrollPage = (props) => {
         </div>
 
         <div className='w-full md:w-1/2 h-fit flex flex-col justify-center items-start gap-1'>
-          <span className='w-fit h-fit text-sm md:text-md border-b border-black'>Artist</span>
-          <span className='w-fit h-fit text-xxs md:text-xs '>{ArtInfo.artist}</span>
+          <span className='w-fit h-fit text-md md:text-lg border-b border-black'>Artist</span>
+          <span className='w-fit h-fit text-sm md:text-md '>{ArtInfo.artist}</span>
         </div>
         <div className='w-full h-fit flex flex-col justify-center items-start gap-1'>
-          <span className='w-fit h-fit text-sm md:text-md  border-b border-black'>Credit</span>
-          <div className='flex flex-col'>
+          <span className='w-fit h-fit text-md md:text-lg  border-b border-black'>Credit</span>
+          <div className='flex flex-col gap-2 max-w-[355px] md:max-w-[500px] break-keep '>
             {ArtInfo.credit.map((item, index) => {
               return (
-                <span key={index} className='w-fit h-fit text-xxs md:text-xs '>
+                <span key={index} className='w-fit h-fit text-sm md:text-md '>
                   {item}
                 </span>
               )
@@ -205,12 +223,8 @@ export const SectionScrollPage = (props) => {
           </div>
         </div>
         <div className='w-full h-fit flex flex-col justify-center items-start gap-1'>
-          <span className='w-fit h-fit  text-sm md:text-md border-b border-black'>Detail</span>
-          <span className='w-fit h-fit text-xxs md:text-xs '>{ArtInfo.detail}</span>
-        </div>
-        <div className='fixed -z-10 top-0 left-0 w-full h-full'>
-          <div className='fixed z-10 top-0 w-full h-full bg-white bg-opacity-30 backdrop-blur-xl'></div>
-          {children}
+          <span className='w-fit h-fit  text-md md:text-lg border-b border-black'>Detail</span>
+          <span className='w-fit h-fit text-sm md:text-md leading-[1.6] break-keep '>{ArtInfo.detail}</span>
         </div>
         <div className='w-full h-fit gap-4 flex justify-start items-center '>
           <button
@@ -235,9 +249,9 @@ export const SectionScrollPage = (props) => {
         </div>
         <p className='text-md'>* 인터뷰어/인터뷰 정리 | 최은총</p>
       </section>
-      {Interview && (
-        <div className='w-full h-screen'>
-          <section className='w-full h-screen '></section>
+      {isTypeStart && (
+        <div className=' w-full h-screen flex flex-col'>
+          {/* <section className='w-full h-screen '></section> */}
 
           {Interview.map((item, index) => {
             return (
@@ -258,11 +272,15 @@ export const SectionScrollPage = (props) => {
                 setSequence={(sequence) => {
                   setTypeSequence(sequence)
                 }}
+                onExitPress={() => {
+                  setIsTypeStart(false)
+                }}
               />
             )
           })}
         </div>
       )}
+
       {isSequenceDone && (
         <section className='fixed top-0 p-10 w-screen h-screen bg-black '>
           <div className='w-full h-full '>
@@ -274,6 +292,7 @@ export const SectionScrollPage = (props) => {
           md:hover:opacity-50 transition-all duration-300 active:opacity-50
           '
             onClick={() => {
+              setIsTypeStart(false)
               setIsSequenceDone(false)
             }}
           >
