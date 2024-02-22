@@ -104,7 +104,7 @@ export default function Page(props) {
             </div> */}
             <div className='w-full h-fit p-6 md:p-10 flex flex-col gap-2'>
               <h3 className='text-xl'>
-                {'<'}도전! 실버벨 프로젝트 The Silver Bell Challenge{'>'}
+                ≪도전! 실버벨: 홍연길 프로젝트 The Silver Bell Challeng: Hong Yeon-gil Project≫
               </h3>
               <p className='text-sm'>
                 일시 | 2023.01.16(화) 18:00-20:00
